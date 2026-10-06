@@ -1,0 +1,5846 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditVersion": "v9.5.0-wdef-v0.1",
+  "generatedBy": "scripts/wdef-sweep.mjs",
+  "sourceModelVersion": "v9.5.0",
+  "conditions": {
+    "attackerLevel": 200,
+    "targetLevel": "same-or-lower",
+    "stage": "End-game",
+    "potion": {
+      "id": "apple",
+      "wa": 100
+    },
+    "fullBuffs": {
+      "mwLevel": 20,
+      "se": true,
+      "si": true,
+      "echo": true,
+      "attackBuff": "rage",
+      "heroEnrage": "average (+17.333333333333332 WA)"
+    },
+    "targetCounts": [
+      1,
+      3,
+      6
+    ],
+    "classes": [
+      "hero",
+      "dark-knight",
+      "paladin",
+      "bowmaster",
+      "marksman",
+      "night-lord",
+      "corsair",
+      "shadower",
+      "buccaneer"
+    ]
+  },
+  "defense": {
+    "specVersion": "v0.1",
+    "allowedRange": {
+      "min": 0,
+      "max": 4000
+    },
+    "presets": [
+      0,
+      500,
+      1000,
+      1500,
+      2000,
+      2500,
+      3200,
+      4000
+    ],
+    "formula": {
+      "specVersion": "v0.1",
+      "min": "baseMin - 0.6 × WDEF",
+      "max": "baseMax - 0.5 × WDEF",
+      "order": "after-element-before-skill",
+      "nonNegativeFloor": 0
+    },
+    "lowDamageBoundary": "max(0, raw defended base range); negative damage is unsupported"
+  },
+  "skillPolicies": {
+    "marksman": "1–3T Snipe + 7 Strafe; 4–6T PA 1.75s",
+    "buccaneer": "Demolition immune per skill; Shockwave generic WDEF-sensitive assumption",
+    "summons": "Phoenix/Frostprey use generic base-range WDEF treatment; exact summon defense VERIFY",
+    "excluded": [
+      "Krex",
+      "MM selector expansion",
+      "BW/Axe research",
+      "summon mechanics research"
+    ]
+  },
+  "historicalComparison": {
+    "archivedAudit": "reference/audits/mapleroyals_wdef_endgame_apple_sweep_v0_1.csv",
+    "archivedModelVersion": "v9.4.2",
+    "oldQualitativeLabels": {
+      "higherSensitivity": [
+        "night-lord",
+        "corsair",
+        "bowmaster"
+      ],
+      "moderate": [
+        "buccaneer",
+        "shadower"
+      ],
+      "lower": [
+        "hero",
+        "dark-knight"
+      ],
+      "protectedOrBranchDependent": [
+        "marksman",
+        "paladin"
+      ]
+    },
+    "comparisonMethod": "Compare current v9.5 lossFractionAt4000 and ranking rows; archived values are evidence, not current inputs."
+  },
+  "summary": {
+    "hero": {
+      "byTarget": {
+        "1": {
+          "wdef0DpmM": 17.57454105980444,
+          "wdef4000DpmM": 15.416445821709202,
+          "lossFractionAt4000": 0.12279667678100104,
+          "nonincreasing": true
+        },
+        "3": {
+          "wdef0DpmM": 52.72362317941332,
+          "wdef4000DpmM": 46.24933746512761,
+          "lossFractionAt4000": 0.12279667678100104,
+          "nonincreasing": true
+        },
+        "6": {
+          "wdef0DpmM": 52.72362317941332,
+          "wdef4000DpmM": 46.24933746512761,
+          "lossFractionAt4000": 0.12279667678100104,
+          "nonincreasing": true
+        }
+      },
+      "meanLossFractionAt4000": 0.12279667678100104
+    },
+    "dark-knight": {
+      "byTarget": {
+        "1": {
+          "wdef0DpmM": 17.765028328320003,
+          "wdef4000DpmM": 15.80409499498667,
+          "lossFractionAt4000": 0.11038166092914836,
+          "nonincreasing": true
+        },
+        "3": {
+          "wdef0DpmM": 53.29508498496002,
+          "wdef4000DpmM": 47.41228498496,
+          "lossFractionAt4000": 0.11038166092914858,
+          "nonincreasing": true
+        },
+        "6": {
+          "wdef0DpmM": 53.29508498496002,
+          "wdef4000DpmM": 47.41228498496,
+          "lossFractionAt4000": 0.11038166092914858,
+          "nonincreasing": true
+        }
+      },
+      "meanLossFractionAt4000": 0.11038166092914851
+    },
+    "paladin": {
+      "byTarget": {
+        "1": {
+          "wdef0DpmM": 17.540995744948493,
+          "wdef4000DpmM": 16.811098875859905,
+          "lossFractionAt4000": 0.04161091420929086,
+          "nonincreasing": true
+        },
+        "3": {
+          "wdef0DpmM": 36.94501252930991,
+          "wdef4000DpmM": 34.5219472588652,
+          "lossFractionAt4000": 0.06558572063069146,
+          "nonincreasing": true
+        },
+        "6": {
+          "wdef0DpmM": 73.89002505861983,
+          "wdef4000DpmM": 69.0438945177304,
+          "lossFractionAt4000": 0.06558572063069146,
+          "nonincreasing": true
+        }
+      },
+      "meanLossFractionAt4000": 0.05759411849022459
+    },
+    "bowmaster": {
+      "byTarget": {
+        "1": {
+          "wdef0DpmM": 18.371504733384,
+          "wdef4000DpmM": 15.638004733384001,
+          "lossFractionAt4000": 0.14879020742556748,
+          "nonincreasing": true
+        },
+        "3": {
+          "wdef0DpmM": 18.849550983384002,
+          "wdef4000DpmM": 15.753050983384002,
+          "lossFractionAt4000": 0.16427447013085805,
+          "nonincreasing": true
+        },
+        "6": {
+          "wdef0DpmM": 28.342392308524808,
+          "wdef4000DpmM": 23.761992308524807,
+          "lossFractionAt4000": 0.1616095053000276,
+          "nonincreasing": true
+        }
+      },
+      "meanLossFractionAt4000": 0.1582247276188177
+    },
+    "marksman": {
+      "byTarget": {
+        "1": {
+          "wdef0DpmM": 17.795998893729525,
+          "wdef4000DpmM": 15.722760798491432,
+          "lossFractionAt4000": 0.11650023736338877,
+          "nonincreasing": true
+        },
+        "3": {
+          "wdef0DpmM": 18.292670322300953,
+          "wdef4000DpmM": 15.842289369920003,
+          "lossFractionAt4000": 0.13395425103100678,
+          "nonincreasing": true
+        },
+        "6": {
+          "wdef0DpmM": 60.14474644230769,
+          "wdef4000DpmM": 52.074149740123836,
+          "lossFractionAt4000": 0.13418622871617503,
+          "nonincreasing": true
+        }
+      },
+      "meanLossFractionAt4000": 0.12821357237019018
+    },
+    "night-lord": {
+      "byTarget": {
+        "1": {
+          "wdef0DpmM": 20.251616112000008,
+          "wdef4000DpmM": 17.222216112,
+          "lossFractionAt4000": 0.14958806167597405,
+          "nonincreasing": true
+        },
+        "3": {
+          "wdef0DpmM": 20.251616112000008,
+          "wdef4000DpmM": 17.222216112,
+          "lossFractionAt4000": 0.14958806167597405,
+          "nonincreasing": true
+        },
+        "6": {
+          "wdef0DpmM": 35.146109546496014,
+          "wdef4000DpmM": 28.432966689353155,
+          "lossFractionAt4000": 0.19100671294106697,
+          "nonincreasing": true
+        }
+      },
+      "meanLossFractionAt4000": 0.16339427876433835
+    },
+    "corsair": {
+      "byTarget": {
+        "1": {
+          "wdef0DpmM": 24.795772963952643,
+          "wdef4000DpmM": 20.56121296395264,
+          "lossFractionAt4000": 0.17077749526728125,
+          "nonincreasing": true
+        },
+        "3": {
+          "wdef0DpmM": 27.601529069287686,
+          "wdef4000DpmM": 22.887809069287687,
+          "lossFractionAt4000": 0.17077749526728103,
+          "nonincreasing": true
+        },
+        "6": {
+          "wdef0DpmM": 53.59535216086274,
+          "wdef4000DpmM": 44.442472160862735,
+          "lossFractionAt4000": 0.17077749526728114,
+          "nonincreasing": true
+        }
+      },
+      "meanLossFractionAt4000": 0.17077749526728114
+    },
+    "shadower": {
+      "byTarget": {
+        "1": {
+          "wdef0DpmM": 17.98718104391346,
+          "wdef4000DpmM": 15.224818619483136,
+          "lossFractionAt4000": 0.15357394900770494,
+          "nonincreasing": true
+        },
+        "3": {
+          "wdef0DpmM": 33.95618363973689,
+          "wdef4000DpmM": 28.741398424951672,
+          "lossFractionAt4000": 0.15357394900770494,
+          "nonincreasing": true
+        },
+        "6": {
+          "wdef0DpmM": 49.17792113341205,
+          "wdef4000DpmM": 41.625473580964496,
+          "lossFractionAt4000": 0.15357394900770482,
+          "nonincreasing": true
+        }
+      },
+      "meanLossFractionAt4000": 0.1535739490077049
+    },
+    "buccaneer": {
+      "byTarget": {
+        "1": {
+          "wdef0DpmM": 15.781737277627133,
+          "wdef4000DpmM": 14.682914525229641,
+          "lossFractionAt4000": 0.06962622258040185,
+          "nonincreasing": true
+        },
+        "3": {
+          "wdef0DpmM": 24.13066939330962,
+          "wdef4000DpmM": 20.72792560660785,
+          "lossFractionAt4000": 0.14101323636074525,
+          "nonincreasing": true
+        },
+        "6": {
+          "wdef0DpmM": 48.06265747750916,
+          "wdef4000DpmM": 41.17232604615422,
+          "lossFractionAt4000": 0.14336143261698053,
+          "nonincreasing": true
+        }
+      },
+      "meanLossFractionAt4000": 0.11800029718604255
+    }
+  },
+  "rows": [
+    {
+      "wdef": 0,
+      "targetCount": 1,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 17.57454105980444,
+      "buffedMin": 12670.491821866664,
+      "buffedMax": 23161.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 1,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 17.765028328320003,
+      "buffedMin": 16739.498880000003,
+      "buffedMax": 23122.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 1,
+      "classId": "paladin",
+      "selector": "blast",
+      "dpmM": 17.540995744948493,
+      "buffedMin": 23491.9549176,
+      "buffedMax": 42942.25103999999,
+      "capState": {
+        "normal": "partially-capped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 1,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 18.371504733384,
+      "buffedMin": 14038.926844800002,
+      "buffedMax": 17223.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": {
+        "status": "normalized-zero",
+        "min": 2897.25,
+        "max": 2897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 0,
+      "targetCount": 1,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 17.795998893729525,
+      "buffedMin": 16797.312896000003,
+      "buffedMax": 18611.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": {
+        "status": "normalized-zero",
+        "min": 2897.25,
+        "max": 2897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 0,
+      "targetCount": 1,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 20.251616112000008,
+      "buffedMin": 14707.056,
+      "buffedMax": 14707.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 1,
+      "classId": "corsair",
+      "selector": "cannon",
+      "dpmM": 24.795772963952643,
+      "buffedMin": 9159.7582336,
+      "buffedMax": 16604.760640000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 1,
+      "classId": "shadower",
+      "selector": "assassinate-bstep",
+      "dpmM": 17.98718104391346,
+      "buffedMin": 10365.53142857143,
+      "buffedMax": 18285.161142857145,
+      "capState": {
+        "assassinate": "uncapped",
+        "boomerangStep": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 1,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 15.781737277627133,
+      "buffedMin": 10884.0116736,
+      "buffedMax": 19786.89024,
+      "capState": {
+        "st": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "fully-capped"
+            }
+          ],
+          "demolition": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "fully-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 0,
+      "targetCount": 3,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 52.72362317941332,
+      "buffedMin": 12670.491821866664,
+      "buffedMax": 23161.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 3,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 53.29508498496002,
+      "buffedMin": 16739.498880000003,
+      "buffedMax": 23122.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 3,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 36.94501252930991,
+      "buffedMin": 23491.9549176,
+      "buffedMax": 42942.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 3,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 18.849550983384002,
+      "buffedMin": 14038.926844800002,
+      "buffedMax": 17223.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": {
+        "status": "normalized-zero",
+        "min": 2897.25,
+        "max": 2897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 0,
+      "targetCount": 3,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 18.292670322300953,
+      "buffedMin": 16797.312896000003,
+      "buffedMax": 18611.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": {
+        "status": "normalized-zero",
+        "min": 2897.25,
+        "max": 2897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 0,
+      "targetCount": 3,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 20.251616112000008,
+      "buffedMin": 14707.056,
+      "buffedMax": 14707.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 3,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 27.601529069287686,
+      "buffedMin": 9159.7582336,
+      "buffedMax": 16604.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 3,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 33.95618363973689,
+      "buffedMin": 10365.53142857143,
+      "buffedMax": 18285.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 3,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 24.13066939330962,
+      "buffedMin": 10884.0116736,
+      "buffedMax": 19786.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "fully-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 0,
+      "targetCount": 6,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 52.72362317941332,
+      "buffedMin": 12670.491821866664,
+      "buffedMax": 23161.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 6,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 53.29508498496002,
+      "buffedMin": 16739.498880000003,
+      "buffedMax": 23122.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 6,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 73.89002505861983,
+      "buffedMin": 23491.9549176,
+      "buffedMax": 42942.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 6,
+      "classId": "bowmaster",
+      "selector": "arrow-rain",
+      "dpmM": 28.342392308524808,
+      "buffedMin": 14038.926844800002,
+      "buffedMax": 17223.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": {
+        "status": "normalized-zero",
+        "min": 2897.25,
+        "max": 2897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 0,
+      "targetCount": 6,
+      "classId": "marksman",
+      "selector": "pa-1.75",
+      "dpmM": 60.14474644230769,
+      "buffedMin": 16797.312896000003,
+      "buffedMax": 18611.378240000002,
+      "capState": {
+        "firstTargetNormal": "uncapped",
+        "firstTargetCritical": "partially-capped",
+        "successiveTargets": "after-modifier-no-recap"
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": {
+        "status": "normalized-zero",
+        "min": 2897.25,
+        "max": 2897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 0,
+      "targetCount": 6,
+      "classId": "night-lord",
+      "selector": "avenger",
+      "dpmM": 35.146109546496014,
+      "buffedMin": 8270.6018304,
+      "buffedMax": 14765.237760000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 6,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 53.59535216086274,
+      "buffedMin": 9159.7582336,
+      "buffedMax": 16604.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 6,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 49.17792113341205,
+      "buffedMin": 10365.53142857143,
+      "buffedMax": 18285.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 0,
+      "targetCount": 6,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 48.06265747750916,
+      "buffedMin": 10884.0116736,
+      "buffedMax": 19786.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ],
+          "shockwave": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "normalized-zero",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 500,
+      "targetCount": 1,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 17.30477915504253,
+      "buffedMin": 12370.491821866664,
+      "buffedMax": 22911.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 1,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 17.519911661653335,
+      "buffedMin": 16439.498880000003,
+      "buffedMax": 22872.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 1,
+      "classId": "paladin",
+      "selector": "blast",
+      "dpmM": 17.457367085489093,
+      "buffedMin": 23191.9549176,
+      "buffedMax": 42692.25103999999,
+      "capState": {
+        "normal": "partially-capped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 1,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 18.029817233384,
+      "buffedMin": 13738.926844800002,
+      "buffedMax": 16973.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2597.25,
+        "max": 2647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 500,
+      "targetCount": 1,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 17.536844131824765,
+      "buffedMin": 16497.312896000003,
+      "buffedMax": 18361.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2597.25,
+        "max": 2647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 500,
+      "targetCount": 1,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 19.872941112000007,
+      "buffedMin": 14407.056,
+      "buffedMax": 14457.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 1,
+      "classId": "corsair",
+      "selector": "cannon",
+      "dpmM": 24.26645296395264,
+      "buffedMin": 8859.7582336,
+      "buffedMax": 16354.760640000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 1,
+      "classId": "shadower",
+      "selector": "assassinate-bstep",
+      "dpmM": 17.641885740859667,
+      "buffedMin": 10065.53142857143,
+      "buffedMax": 18035.161142857145,
+      "capState": {
+        "assassinate": "uncapped",
+        "boomerangStep": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 1,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 15.650959386135673,
+      "buffedMin": 10584.0116736,
+      "buffedMax": 19536.89024,
+      "capState": {
+        "st": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "demolition": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 500,
+      "targetCount": 3,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 51.91433746512761,
+      "buffedMin": 12370.491821866664,
+      "buffedMax": 22911.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 3,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 52.55973498496,
+      "buffedMin": 16439.498880000003,
+      "buffedMax": 22872.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 3,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 36.644660179221695,
+      "buffedMin": 23191.9549176,
+      "buffedMax": 42692.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 3,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 18.462488483384004,
+      "buffedMin": 13738.926844800002,
+      "buffedMax": 16973.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2597.25,
+        "max": 2647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 500,
+      "targetCount": 3,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 17.986372703253334,
+      "buffedMin": 16497.312896000003,
+      "buffedMax": 18361.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2597.25,
+        "max": 2647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 500,
+      "targetCount": 3,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 19.872941112000007,
+      "buffedMin": 14407.056,
+      "buffedMax": 14457.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 3,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 27.012314069287687,
+      "buffedMin": 8859.7582336,
+      "buffedMax": 16354.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 3,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 33.304335487888736,
+      "buffedMin": 10065.53142857143,
+      "buffedMax": 18035.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 3,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 23.70893610459212,
+      "buffedMin": 10584.0116736,
+      "buffedMax": 19536.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 500,
+      "targetCount": 6,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 51.91433746512761,
+      "buffedMin": 12370.491821866664,
+      "buffedMax": 22911.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 6,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 52.55973498496,
+      "buffedMin": 16439.498880000003,
+      "buffedMax": 22872.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 6,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 73.28932035844339,
+      "buffedMin": 23191.9549176,
+      "buffedMax": 42692.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 6,
+      "classId": "bowmaster",
+      "selector": "arrow-rain",
+      "dpmM": 27.769842308524808,
+      "buffedMin": 13738.926844800002,
+      "buffedMax": 16973.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2597.25,
+        "max": 2647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 500,
+      "targetCount": 6,
+      "classId": "marksman",
+      "selector": "pa-1.75",
+      "dpmM": 59.16983914604231,
+      "buffedMin": 16497.312896000003,
+      "buffedMax": 18361.378240000002,
+      "capState": {
+        "firstTargetNormal": "uncapped",
+        "firstTargetCritical": "partially-capped",
+        "successiveTargets": "after-modifier-no-recap"
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2597.25,
+        "max": 2647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 500,
+      "targetCount": 6,
+      "classId": "night-lord",
+      "selector": "avenger",
+      "dpmM": 34.30696668935315,
+      "buffedMin": 7970.601830400001,
+      "buffedMax": 14515.237760000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 6,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 52.45124216086273,
+      "buffedMin": 8859.7582336,
+      "buffedMax": 16354.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 6,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 48.23386518935611,
+      "buffedMin": 10065.53142857143,
+      "buffedMax": 18035.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 500,
+      "targetCount": 6,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 47.20448862936025,
+      "buffedMin": 10584.0116736,
+      "buffedMax": 19536.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ],
+          "shockwave": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 1,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 17.035017250280628,
+      "buffedMin": 12070.491821866664,
+      "buffedMax": 22661.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 1,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 17.27479499498667,
+      "buffedMin": 16139.498880000003,
+      "buffedMax": 22622.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 1,
+      "classId": "paladin",
+      "selector": "blast",
+      "dpmM": 17.37153122571425,
+      "buffedMin": 22891.9549176,
+      "buffedMax": 42442.25103999999,
+      "capState": {
+        "normal": "partially-capped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 1,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 17.688129733384002,
+      "buffedMin": 13438.926844800002,
+      "buffedMax": 16723.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2297.25,
+        "max": 2397.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 1,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 17.277689369920004,
+      "buffedMin": 16197.312896000003,
+      "buffedMax": 18111.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2297.25,
+        "max": 2397.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 1,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 19.49426611200001,
+      "buffedMin": 14107.056,
+      "buffedMax": 14207.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 1,
+      "classId": "corsair",
+      "selector": "cannon",
+      "dpmM": 23.737132963952643,
+      "buffedMin": 8559.7582336,
+      "buffedMax": 16104.760640000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 1,
+      "classId": "shadower",
+      "selector": "assassinate-bstep",
+      "dpmM": 17.296590437805875,
+      "buffedMin": 9765.53142857143,
+      "buffedMax": 17785.161142857145,
+      "capState": {
+        "assassinate": "uncapped",
+        "boomerangStep": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 1,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 15.518320226104308,
+      "buffedMin": 10284.0116736,
+      "buffedMax": 19286.89024,
+      "capState": {
+        "st": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "demolition": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 3,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 51.105051750841895,
+      "buffedMin": 12070.491821866664,
+      "buffedMax": 22661.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 3,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 51.82438498496002,
+      "buffedMin": 16139.498880000003,
+      "buffedMax": 22622.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 3,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 36.34357364511391,
+      "buffedMin": 22891.9549176,
+      "buffedMax": 42442.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 3,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 18.075425983384005,
+      "buffedMin": 13438.926844800002,
+      "buffedMax": 16723.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2297.25,
+        "max": 2397.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 3,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 17.68007508420572,
+      "buffedMin": 16197.312896000003,
+      "buffedMax": 18111.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2297.25,
+        "max": 2397.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 3,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 19.49426611200001,
+      "buffedMin": 14107.056,
+      "buffedMax": 14207.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 3,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 26.423099069287687,
+      "buffedMin": 8559.7582336,
+      "buffedMax": 16104.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 3,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 32.652487336040586,
+      "buffedMin": 9765.53142857143,
+      "buffedMax": 17785.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 3,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 23.285547171444687,
+      "buffedMin": 10284.0116736,
+      "buffedMax": 19286.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 6,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 51.105051750841895,
+      "buffedMin": 12070.491821866664,
+      "buffedMax": 22661.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 6,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 51.82438498496002,
+      "buffedMin": 16139.498880000003,
+      "buffedMax": 22622.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 6,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 72.68714729022783,
+      "buffedMin": 22891.9549176,
+      "buffedMax": 42442.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 6,
+      "classId": "bowmaster",
+      "selector": "arrow-rain",
+      "dpmM": 27.19729230852481,
+      "buffedMin": 13438.926844800002,
+      "buffedMax": 16723.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2297.25,
+        "max": 2397.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 6,
+      "classId": "marksman",
+      "selector": "pa-1.75",
+      "dpmM": 58.15624666903813,
+      "buffedMin": 16197.312896000003,
+      "buffedMax": 18111.378240000002,
+      "capState": {
+        "firstTargetNormal": "uncapped",
+        "firstTargetCritical": "uncapped",
+        "successiveTargets": "after-modifier-no-recap"
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 2297.25,
+        "max": 2397.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 6,
+      "classId": "night-lord",
+      "selector": "avenger",
+      "dpmM": 33.46782383221029,
+      "buffedMin": 7670.601830400001,
+      "buffedMax": 14265.237760000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 6,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 51.307132160862736,
+      "buffedMin": 8559.7582336,
+      "buffedMax": 16104.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 6,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 47.28980924530017,
+      "buffedMin": 9765.53142857143,
+      "buffedMax": 17785.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1000,
+      "targetCount": 6,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 46.34410247424553,
+      "buffedMin": 10284.0116736,
+      "buffedMax": 19286.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "partially-capped"
+            }
+          ],
+          "shockwave": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 1,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 16.765255345518725,
+      "buffedMin": 11770.491821866664,
+      "buffedMax": 22411.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 1,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 17.029678328320003,
+      "buffedMin": 15839.498880000003,
+      "buffedMax": 22372.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 1,
+      "classId": "paladin",
+      "selector": "blast",
+      "dpmM": 17.28350505720791,
+      "buffedMin": 22591.9549176,
+      "buffedMax": 42192.25103999999,
+      "capState": {
+        "normal": "partially-capped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 1,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 17.346442233384,
+      "buffedMin": 13138.926844800002,
+      "buffedMax": 16473.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1997.25,
+        "max": 2147.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 1,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 17.018534608015237,
+      "buffedMin": 15897.312896000003,
+      "buffedMax": 17861.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1997.25,
+        "max": 2147.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 1,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 19.115591112000008,
+      "buffedMin": 13807.056,
+      "buffedMax": 13957.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 1,
+      "classId": "corsair",
+      "selector": "cannon",
+      "dpmM": 23.20781296395264,
+      "buffedMin": 8259.7582336,
+      "buffedMax": 15854.760640000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 1,
+      "classId": "shadower",
+      "selector": "assassinate-bstep",
+      "dpmM": 16.951295134752087,
+      "buffedMin": 9465.53142857143,
+      "buffedMax": 17535.161142857145,
+      "capState": {
+        "assassinate": "uncapped",
+        "boomerangStep": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 1,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 15.383717301319553,
+      "buffedMin": 9984.0116736,
+      "buffedMax": 19036.89024,
+      "capState": {
+        "st": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "demolition": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 3,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 50.29576603655619,
+      "buffedMin": 11770.491821866664,
+      "buffedMax": 22411.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 3,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 51.08903498496,
+      "buffedMin": 15839.498880000003,
+      "buffedMax": 22372.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 3,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 36.041758545656904,
+      "buffedMin": 22591.9549176,
+      "buffedMax": 42192.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 3,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 17.688363483384002,
+      "buffedMin": 13138.926844800002,
+      "buffedMax": 16473.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1997.25,
+        "max": 2147.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 3,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 17.373777465158096,
+      "buffedMin": 15897.312896000003,
+      "buffedMax": 17861.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1997.25,
+        "max": 2147.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 3,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 19.115591112000008,
+      "buffedMin": 13807.056,
+      "buffedMax": 13957.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 3,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 25.833884069287688,
+      "buffedMin": 8259.7582336,
+      "buffedMax": 15854.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 3,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 32.00063918419244,
+      "buffedMin": 9465.53142857143,
+      "buffedMax": 17535.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 3,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 22.860795807611858,
+      "buffedMin": 9984.0116736,
+      "buffedMax": 19036.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 6,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 50.29576603655619,
+      "buffedMin": 11770.491821866664,
+      "buffedMax": 22411.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 6,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 51.08903498496,
+      "buffedMin": 15839.498880000003,
+      "buffedMax": 22372.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 6,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 72.08351709131381,
+      "buffedMin": 22591.9549176,
+      "buffedMax": 42192.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 6,
+      "classId": "bowmaster",
+      "selector": "arrow-rain",
+      "dpmM": 26.624742308524805,
+      "buffedMin": 13138.926844800002,
+      "buffedMax": 16473.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1997.25,
+        "max": 2147.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 6,
+      "classId": "marksman",
+      "selector": "pa-1.75",
+      "dpmM": 57.14256384755242,
+      "buffedMin": 15897.312896000003,
+      "buffedMax": 17861.378240000002,
+      "capState": {
+        "firstTargetNormal": "uncapped",
+        "firstTargetCritical": "uncapped",
+        "successiveTargets": "after-modifier-no-recap"
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1997.25,
+        "max": 2147.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 6,
+      "classId": "night-lord",
+      "selector": "avenger",
+      "dpmM": 32.62868097506744,
+      "buffedMin": 7370.601830400001,
+      "buffedMax": 14015.237760000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 6,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 50.16302216086274,
+      "buffedMin": 8259.7582336,
+      "buffedMax": 15854.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 6,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 46.34575330124422,
+      "buffedMin": 9465.53142857143,
+      "buffedMax": 17535.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 1500,
+      "targetCount": 6,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 45.48218556294188,
+      "buffedMin": 9984.0116736,
+      "buffedMax": 19036.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "shockwave": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 1,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 16.49549344075682,
+      "buffedMin": 11470.491821866664,
+      "buffedMax": 22161.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 1,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 16.78456166165334,
+      "buffedMin": 15539.498880000003,
+      "buffedMax": 22122.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 1,
+      "classId": "paladin",
+      "selector": "blast",
+      "dpmM": 17.193305299632097,
+      "buffedMin": 22291.9549176,
+      "buffedMax": 41942.25103999999,
+      "capState": {
+        "normal": "partially-capped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 1,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 17.004754733384,
+      "buffedMin": 12838.926844800002,
+      "buffedMax": 16223.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1697.25,
+        "max": 1897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 1,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 16.75937984611048,
+      "buffedMin": 15597.312896000003,
+      "buffedMax": 17611.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1697.25,
+        "max": 1897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 1,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 18.736916112000007,
+      "buffedMin": 13507.056,
+      "buffedMax": 13707.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 1,
+      "classId": "corsair",
+      "selector": "cannon",
+      "dpmM": 22.678492963952642,
+      "buffedMin": 7959.7582336,
+      "buffedMax": 15604.760640000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 1,
+      "classId": "shadower",
+      "selector": "assassinate-bstep",
+      "dpmM": 16.605999831698295,
+      "buffedMin": 9165.53142857143,
+      "buffedMax": 17285.161142857145,
+      "capState": {
+        "assassinate": "uncapped",
+        "boomerangStep": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 1,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 15.247220200095997,
+      "buffedMin": 9684.0116736,
+      "buffedMax": 18786.89024,
+      "capState": {
+        "st": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "demolition": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 3,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 49.486480322270474,
+      "buffedMin": 11470.491821866664,
+      "buffedMax": 22161.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 3,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 50.353684984960005,
+      "buffedMin": 15539.498880000003,
+      "buffedMax": 22122.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 3,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 35.73922044233441,
+      "buffedMin": 22291.9549176,
+      "buffedMax": 41942.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 3,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 17.301300983384003,
+      "buffedMin": 12838.926844800002,
+      "buffedMax": 16223.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1697.25,
+        "max": 1897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 3,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 17.06747984611048,
+      "buffedMin": 15597.312896000003,
+      "buffedMax": 17611.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1697.25,
+        "max": 1897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 3,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 18.736916112000007,
+      "buffedMin": 13507.056,
+      "buffedMax": 13707.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 3,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 25.24466906928769,
+      "buffedMin": 7959.7582336,
+      "buffedMax": 15604.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 3,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 31.34879103234428,
+      "buffedMin": 9165.53142857143,
+      "buffedMax": 17285.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 3,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 22.435406000213902,
+      "buffedMin": 9684.0116736,
+      "buffedMax": 18786.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 6,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 49.486480322270474,
+      "buffedMin": 11470.491821866664,
+      "buffedMax": 22161.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 6,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 50.353684984960005,
+      "buffedMin": 15539.498880000003,
+      "buffedMax": 22122.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 6,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 71.47844088466881,
+      "buffedMin": 22291.9549176,
+      "buffedMax": 41942.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 6,
+      "classId": "bowmaster",
+      "selector": "arrow-rain",
+      "dpmM": 26.052192308524805,
+      "buffedMin": 12838.926844800002,
+      "buffedMax": 16223.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1697.25,
+        "max": 1897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 6,
+      "classId": "marksman",
+      "selector": "pa-1.75",
+      "dpmM": 56.12888102606671,
+      "buffedMin": 15597.312896000003,
+      "buffedMax": 17611.378240000002,
+      "capState": {
+        "firstTargetNormal": "uncapped",
+        "firstTargetCritical": "uncapped",
+        "successiveTargets": "after-modifier-no-recap"
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1697.25,
+        "max": 1897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 6,
+      "classId": "night-lord",
+      "selector": "avenger",
+      "dpmM": 31.789538117924582,
+      "buffedMin": 7070.601830400001,
+      "buffedMax": 13765.237760000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 6,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 49.01891216086273,
+      "buffedMin": 7959.7582336,
+      "buffedMax": 15604.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 6,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 45.401697357188276,
+      "buffedMin": 9165.53142857143,
+      "buffedMax": 17285.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2000,
+      "targetCount": 6,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 44.620213659584344,
+      "buffedMin": 9684.0116736,
+      "buffedMax": 18786.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "shockwave": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 1,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 16.225731535994914,
+      "buffedMin": 11170.491821866664,
+      "buffedMax": 21911.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 1,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 16.53944499498667,
+      "buffedMin": 15239.498880000003,
+      "buffedMax": 21872.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 1,
+      "classId": "paladin",
+      "selector": "blast",
+      "dpmM": 17.10094850290861,
+      "buffedMin": 21991.9549176,
+      "buffedMax": 41692.25103999999,
+      "capState": {
+        "normal": "partially-capped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 1,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 16.663067233384,
+      "buffedMin": 12538.926844800002,
+      "buffedMax": 15973.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1397.25,
+        "max": 1647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 1,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 16.500225084205717,
+      "buffedMin": 15297.312896000003,
+      "buffedMax": 17361.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1397.25,
+        "max": 1647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 1,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 18.35824111200001,
+      "buffedMin": 13207.056,
+      "buffedMax": 13457.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 1,
+      "classId": "corsair",
+      "selector": "cannon",
+      "dpmM": 22.14917296395264,
+      "buffedMin": 7659.7582336,
+      "buffedMax": 15354.760640000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 1,
+      "classId": "shadower",
+      "selector": "assassinate-bstep",
+      "dpmM": 16.260704528644506,
+      "buffedMin": 8865.53142857143,
+      "buffedMax": 17035.161142857145,
+      "capState": {
+        "assassinate": "uncapped",
+        "boomerangStep": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 1,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 15.108861353007658,
+      "buffedMin": 9384.0116736,
+      "buffedMax": 18536.89024,
+      "capState": {
+        "st": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "demolition": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 3,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 48.67719460798475,
+      "buffedMin": 11170.491821866664,
+      "buffedMax": 21911.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 3,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 49.61833498496002,
+      "buffedMin": 15239.498880000003,
+      "buffedMax": 21872.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 3,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 35.43596484016926,
+      "buffedMin": 21991.9549176,
+      "buffedMax": 41692.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 3,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 16.914238483384004,
+      "buffedMin": 12538.926844800002,
+      "buffedMax": 15973.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1397.25,
+        "max": 1647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 3,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 16.761182227062857,
+      "buffedMin": 15297.312896000003,
+      "buffedMax": 17361.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1397.25,
+        "max": 1647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 3,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 18.35824111200001,
+      "buffedMin": 13207.056,
+      "buffedMax": 13457.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 3,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 24.65545406928769,
+      "buffedMin": 7659.7582336,
+      "buffedMax": 15354.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 3,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 30.69694288049613,
+      "buffedMin": 8865.53142857143,
+      "buffedMax": 17035.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 3,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 22.009414372641054,
+      "buffedMin": 9384.0116736,
+      "buffedMax": 18536.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 6,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 48.67719460798475,
+      "buffedMin": 11170.491821866664,
+      "buffedMax": 21911.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 6,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 49.61833498496002,
+      "buffedMin": 15239.498880000003,
+      "buffedMax": 21872.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 6,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 70.87192968033852,
+      "buffedMin": 21991.9549176,
+      "buffedMax": 41692.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 6,
+      "classId": "bowmaster",
+      "selector": "arrow-rain",
+      "dpmM": 25.479642308524806,
+      "buffedMin": 12538.926844800002,
+      "buffedMax": 15973.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1397.25,
+        "max": 1647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 6,
+      "classId": "marksman",
+      "selector": "pa-1.75",
+      "dpmM": 55.11519820458099,
+      "buffedMin": 15297.312896000003,
+      "buffedMax": 17361.378240000002,
+      "capState": {
+        "firstTargetNormal": "uncapped",
+        "firstTargetCritical": "uncapped",
+        "successiveTargets": "after-modifier-no-recap"
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 1397.25,
+        "max": 1647.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 6,
+      "classId": "night-lord",
+      "selector": "avenger",
+      "dpmM": 30.950395260781725,
+      "buffedMin": 6770.601830400001,
+      "buffedMax": 13515.237760000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 6,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 47.874802160862735,
+      "buffedMin": 7659.7582336,
+      "buffedMax": 15354.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 6,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 44.45764141313233,
+      "buffedMin": 8865.53142857143,
+      "buffedMax": 17035.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 2500,
+      "targetCount": 6,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 43.75824175622681,
+      "buffedMin": 9384.0116736,
+      "buffedMax": 18536.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "shockwave": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 1,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 15.848064869328248,
+      "buffedMin": 10750.491821866664,
+      "buffedMax": 21561.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 1,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 16.196281661653337,
+      "buffedMin": 14819.498880000003,
+      "buffedMax": 21522.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 1,
+      "classId": "paladin",
+      "selector": "blast",
+      "dpmM": 16.96805632212994,
+      "buffedMin": 21571.9549176,
+      "buffedMax": 41342.25103999999,
+      "capState": {
+        "normal": "partially-capped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 1,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 16.184704733384002,
+      "buffedMin": 12118.926844800002,
+      "buffedMax": 15623.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 977.25,
+        "max": 1297.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 1,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 16.137408417539046,
+      "buffedMin": 14877.312896000003,
+      "buffedMax": 17011.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 977.25,
+        "max": 1297.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 1,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 17.828096112000004,
+      "buffedMin": 12787.056,
+      "buffedMax": 13107.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 1,
+      "classId": "corsair",
+      "selector": "cannon",
+      "dpmM": 21.408124963952645,
+      "buffedMin": 7239.7582336,
+      "buffedMax": 15004.760640000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 1,
+      "classId": "shadower",
+      "selector": "assassinate-bstep",
+      "dpmM": 15.777291104369201,
+      "buffedMin": 8445.53142857143,
+      "buffedMax": 16685.161142857145,
+      "capState": {
+        "assassinate": "uncapped",
+        "boomerangStep": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 1,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 14.912088885730133,
+      "buffedMin": 8964.0116736,
+      "buffedMax": 18186.89024,
+      "capState": {
+        "st": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "demolition": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 3,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 47.54419460798475,
+      "buffedMin": 10750.491821866664,
+      "buffedMax": 21561.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 3,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 48.58884498496001,
+      "buffedMin": 14819.498880000003,
+      "buffedMax": 21522.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 3,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 35.01021196400906,
+      "buffedMin": 21571.9549176,
+      "buffedMax": 41342.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 3,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 16.372350983384003,
+      "buffedMin": 12118.926844800002,
+      "buffedMax": 15623.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 977.25,
+        "max": 1297.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 3,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 16.332365560396187,
+      "buffedMin": 14877.312896000003,
+      "buffedMax": 17011.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 977.25,
+        "max": 1297.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 3,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 17.828096112000004,
+      "buffedMin": 12787.056,
+      "buffedMax": 13107.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 3,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 23.83055306928769,
+      "buffedMin": 7239.7582336,
+      "buffedMax": 15004.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 3,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 29.784355467908718,
+      "buffedMin": 8445.53142857143,
+      "buffedMax": 16685.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 3,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 21.41203367239213,
+      "buffedMin": 8964.0116736,
+      "buffedMax": 18186.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 6,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 47.54419460798475,
+      "buffedMin": 10750.491821866664,
+      "buffedMax": 21561.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 6,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 48.58884498496001,
+      "buffedMin": 14819.498880000003,
+      "buffedMax": 21522.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 6,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 70.02042392801812,
+      "buffedMin": 21571.9549176,
+      "buffedMax": 41342.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 6,
+      "classId": "bowmaster",
+      "selector": "arrow-rain",
+      "dpmM": 24.678072308524808,
+      "buffedMin": 12118.926844800002,
+      "buffedMax": 15623.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 977.25,
+        "max": 1297.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 6,
+      "classId": "marksman",
+      "selector": "pa-1.75",
+      "dpmM": 53.69604225450098,
+      "buffedMin": 14877.312896000003,
+      "buffedMax": 17011.378240000002,
+      "capState": {
+        "firstTargetNormal": "uncapped",
+        "firstTargetCritical": "uncapped",
+        "successiveTargets": "after-modifier-no-recap"
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 977.25,
+        "max": 1297.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 6,
+      "classId": "night-lord",
+      "selector": "avenger",
+      "dpmM": 29.775595260781717,
+      "buffedMin": 6350.601830400001,
+      "buffedMax": 13165.237760000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 6,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 46.273048160862736,
+      "buffedMin": 7239.7582336,
+      "buffedMax": 15004.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 6,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 43.13596309145401,
+      "buffedMin": 8445.53142857143,
+      "buffedMax": 16685.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 3200,
+      "targetCount": 6,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 42.55148109152627,
+      "buffedMin": 8964.0116736,
+      "buffedMax": 18186.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "shockwave": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 1,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 15.416445821709202,
+      "buffedMin": 10270.491821866664,
+      "buffedMax": 21161.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 1,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 15.80409499498667,
+      "buffedMin": 14339.498880000003,
+      "buffedMax": 21122.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 1,
+      "classId": "paladin",
+      "selector": "blast",
+      "dpmM": 16.811098875859905,
+      "buffedMin": 21091.9549176,
+      "buffedMax": 40942.25103999999,
+      "capState": {
+        "normal": "partially-capped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 1,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 15.638004733384001,
+      "buffedMin": 11638.926844800002,
+      "buffedMax": 15223.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 497.25,
+        "max": 897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 1,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 15.722760798491432,
+      "buffedMin": 14397.312896000003,
+      "buffedMax": 16611.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 497.25,
+        "max": 897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 1,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 17.222216112,
+      "buffedMin": 12307.056,
+      "buffedMax": 12707.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 1,
+      "classId": "corsair",
+      "selector": "cannon",
+      "dpmM": 20.56121296395264,
+      "buffedMin": 6759.7582336,
+      "buffedMax": 14604.760640000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 1,
+      "classId": "shadower",
+      "selector": "assassinate-bstep",
+      "dpmM": 15.224818619483136,
+      "buffedMin": 7965.53142857143,
+      "buffedMax": 16285.161142857145,
+      "capState": {
+        "assassinate": "uncapped",
+        "boomerangStep": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 1,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 14.682914525229641,
+      "buffedMin": 8484.0116736,
+      "buffedMax": 17786.89024,
+      "capState": {
+        "st": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "demolition": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 3,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 46.24933746512761,
+      "buffedMin": 10270.491821866664,
+      "buffedMax": 21161.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 3,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 47.41228498496,
+      "buffedMin": 14339.498880000003,
+      "buffedMax": 21122.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 3,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 34.5219472588652,
+      "buffedMin": 21091.9549176,
+      "buffedMax": 40942.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 3,
+      "classId": "bowmaster",
+      "selector": "hurricane",
+      "dpmM": 15.753050983384002,
+      "buffedMin": 11638.926844800002,
+      "buffedMax": 15223.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 497.25,
+        "max": 897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 3,
+      "classId": "marksman",
+      "selector": "snipe-plus-7-strafe",
+      "dpmM": 15.842289369920003,
+      "buffedMin": 14397.312896000003,
+      "buffedMax": 16611.378240000002,
+      "capState": {
+        "snipe": "fixed-cap",
+        "strafe": {
+          "normal": "uncapped",
+          "critical": "uncapped"
+        }
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 497.25,
+        "max": 897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 3,
+      "classId": "night-lord",
+      "selector": "tt-sp",
+      "dpmM": 17.222216112,
+      "buffedMin": 12307.056,
+      "buffedMax": 12707.056,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 3,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 22.887809069287687,
+      "buffedMin": 6759.7582336,
+      "buffedMax": 14604.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 3,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 28.741398424951672,
+      "buffedMin": 7965.53142857143,
+      "buffedMax": 16285.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 3,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 20.72792560660785,
+      "buffedMin": 8484.0116736,
+      "buffedMax": 17786.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "barrage": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            },
+            {
+              "normal": "partially-capped",
+              "critical": "partially-capped"
+            }
+          ],
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 6,
+      "classId": "hero",
+      "selector": "brandish",
+      "dpmM": 46.24933746512761,
+      "buffedMin": 10270.491821866664,
+      "buffedMax": 21161.096746666663,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "hero-brandish-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 6,
+      "classId": "dark-knight",
+      "selector": "spear-crusher",
+      "dpmM": 47.41228498496,
+      "buffedMin": 14339.498880000003,
+      "buffedMax": 21122.195200000002,
+      "capState": "uncapped",
+      "formulaVersion": "dark-knight-spear-crusher-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 6,
+      "classId": "paladin",
+      "selector": "acb",
+      "dpmM": 69.0438945177304,
+      "buffedMin": 21091.9549176,
+      "buffedMax": 40942.25103999999,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "partially-capped"
+      },
+      "formulaVersion": "paladin-2h-sword-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 6,
+      "classId": "bowmaster",
+      "selector": "arrow-rain",
+      "dpmM": 23.761992308524807,
+      "buffedMin": 11638.926844800002,
+      "buffedMax": 15223.97248,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "bowmaster-hurricane-arrow-rain-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 497.25,
+        "max": 897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 6,
+      "classId": "marksman",
+      "selector": "pa-1.75",
+      "dpmM": 52.074149740123836,
+      "buffedMin": 14397.312896000003,
+      "buffedMax": 16611.378240000002,
+      "capState": {
+        "firstTargetNormal": "uncapped",
+        "firstTargetCritical": "uncapped",
+        "successiveTargets": "after-modifier-no-recap"
+      },
+      "formulaVersion": "marksman-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": {
+        "status": "applied",
+        "min": 497.25,
+        "max": 897.25,
+        "treatment": "generic WDEF range; exact summon mechanics VERIFY"
+      },
+      "notes": {
+        "order": "after-element-before-skill",
+        "fixedDamage": {
+          "snipe": "immune"
+        },
+        "summon": "generic WDEF range; exact summon mechanics VERIFY"
+      }
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 6,
+      "classId": "night-lord",
+      "selector": "avenger",
+      "dpmM": 28.432966689353155,
+      "buffedMin": 5870.601830400001,
+      "buffedMax": 12765.237760000004,
+      "capState": {
+        "normal": "uncapped",
+        "critical": "uncapped"
+      },
+      "formulaVersion": "night-lord-tt-sp-avenger-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 6,
+      "classId": "corsair",
+      "selector": "torpedo",
+      "dpmM": 44.442472160862735,
+      "buffedMin": 6759.7582336,
+      "buffedMax": 14604.760640000004,
+      "capState": "aggregate-average-source",
+      "formulaVersion": "corsair-cannon-torpedo-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 6,
+      "classId": "shadower",
+      "selector": "bstep-bot",
+      "dpmM": 41.625473580964496,
+      "buffedMin": 7965.53142857143,
+      "buffedMax": 16285.161142857145,
+      "capState": {
+        "boomerangStep": "uncapped",
+        "bandOfThieves": "uncapped"
+      },
+      "formulaVersion": "shadower-dagger-canonical-v9.5.0-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": null
+    },
+    {
+      "wdef": 4000,
+      "targetCount": 6,
+      "classId": "buccaneer",
+      "selector": "sustained-cap-aware",
+      "dpmM": 41.17232604615422,
+      "buffedMin": 8484.0116736,
+      "buffedMax": 17786.89024,
+      "capState": {
+        "st": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "snatch": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        },
+        "nonSt": {
+          "dragon-strike": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ],
+          "shockwave": [
+            {
+              "normal": "uncapped",
+              "critical": "uncapped"
+            }
+          ]
+        }
+      },
+      "formulaVersion": "buccaneer-sustained-cap-aware-source-driven-wdef-v0.1",
+      "defenseStatus": "applied",
+      "summonDefense": null,
+      "notes": {
+        "order": "after-element-before-skill",
+        "immuneSkills": [
+          "demolition"
+        ],
+        "shockwave": "wdef-sensitive-assumption; coefficient evidence only; VERIFY"
+      }
+    }
+  ]
+}
