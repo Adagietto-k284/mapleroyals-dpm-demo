@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MapleRoyals gear progression and DPM comparison">
+    <title>MapleRoyals DPM Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <script src="./theme.js"></script>
+    <link rel="stylesheet" href="./ui-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="header-topline">
+          <a class="brand" href="./" aria-label="MapleRoyals DPM Lab home">
+            <span class="brand-mark" aria-hidden="true">MR</span>
+            <span>MapleRoyals <span class="brand-muted">/ DPM Lab</span></span>
+          </a>
+          <span class="phase-label">PHASE 5 · USER PRESET</span>
+        </div>
+        <details class="site-changelog">
+          <summary>Changelog <span aria-hidden="true">▾</span></summary>
+          <div class="site-changelog-body">
+            <p class="site-changelog-intro">A short history of changes visible in this site.</p>
+            <ol>
+              <li><time datetime="2026-09-24">2026-09-24</time><div><strong>Latest refinements</strong><p>Personal range and Echo rounding, optional event NX gear, and the Sky Ski Krex reference.</p></div></li>
+              <li><time datetime="2026-09-23">2026-09-23</time><div><strong>Phase 5 · User Preset</strong><p>Character inputs, per-slot gear, three comparison presets, ammunition and passive attack, and English / Traditional Chinese switching.</p></div></li>
+              <li><time datetime="2026-09-11">2026-09-11</time><div><strong>Public UI and gear review</strong><p>Simpler navigation and Library, improved light-theme readability, and aligned class gear fixtures.</p></div></li>
+              <li><time datetime="2026-09-10">2026-09-10</time><div><strong>Phase 4 · WDEF</strong><p>Bounded defense presets and a Netlify-ready static build.</p></div></li>
+              <li><time datetime="2026-09-09">2026-09-09</time><div><strong>Phase 3 · Interactive site</strong><p>Progression chart, reference layers, and a reviewable model Library.</p></div></li>
+              <li><time datetime="2026-09-03">2026-09-03–04</time><div><strong>Phase 2 · Class models</strong><p>Nine class engines and recovered authoritative gear and stat fixtures.</p></div></li>
+              <li><time datetime="2026-09-02">2026-09-02</time><div><strong>Phase 1 · Foundation</strong><p>Initial DPM chart and archived model inputs.</p></div></li>
+            </ol>
+          </div>
+        </details>
+        <div class="header-copy">
+          <p class="eyebrow">Gear-driven Master v9.5.0 · Integration</p>
+          <h1>Gear &amp; Damage Analysis</h1>
+          <p class="header-description">Compare how each class scales from Entry to End-game across every supported target count.</p>
+        </div>
+        <div class="source-strip" aria-label="Model status">
+          <span><i class="status-dot" aria-hidden="true"></i>9 class engines live</span>
+          <span>WDEF presets enabled</span>
+          <span>Audited fixtures enabled</span>
+        </div>
+      </header>
+
+      <main>
+        <div class="appearance-row">
+          <label class="theme-control">Appearance <select id="theme-select" aria-label="Appearance"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+          <label class="language-control">Language <select id="language-select" aria-label="Language"><option value="en">English</option><option value="zh-TW">繁體中文</option></select></label>
+        </div>
+        <nav class="page-nav" aria-label="Main pages">
+          <a href="#/progression">Progression</a>
+          <a href="#/user-preset">User Preset</a>
+          <a href="#/library">Library</a>
+        </nav>
+        <section class="controls-panel" aria-labelledby="controls-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Explore the model</p>
+              <h2 id="controls-heading">View controls</h2>
+            </div>
+            <p id="loading" class="loading-message" aria-live="polite">Loading authoritative data…</p>
+          </div>
+
+          <div id="error-message" class="error-message" role="alert" hidden></div>
+
+          <div class="control-row">
+            <fieldset class="target-field">
+              <legend>Targets</legend>
+              <div id="target-controls" class="target-controls" role="group" aria-label="Target count">
+                <button type="button" data-target="1" aria-pressed="true" class="is-active">1T</button>
+                <button type="button" data-target="2" aria-pressed="false">2T</button>
+                <button type="button" data-target="3" aria-pressed="false">3T</button>
+                <button type="button" data-target="4" aria-pressed="false">4T</button>
+                <button type="button" data-target="6" aria-pressed="false">6T</button>
+              </div>
+            </fieldset>
+
+            <label class="select-field">
+              <span>Potion</span>
+              <select id="potion-select" class="select-control" aria-label="Potion"></select>
+            </label>
+
+            <label class="select-field">
+              <span>WDEF</span>
+              <select id="wdef-select" class="select-control" aria-label="WDEF">
+                <option value="0">0 · Baseline</option>
+                <option value="1000">1000 · Low–medium</option>
+                <option value="2000">2000 · Medium</option>
+                <option value="3200">3200 · High</option>
+                <option value="4000">4000 · Test ceiling</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset class="buff-controls">
+            <legend>Combat buffs</legend>
+            <div class="buff-group">
+              <p class="buff-group-title">Shared buffs</p>
+              <div class="buff-control-grid">
+                <label>Maple Warrior <select id="mw-select" aria-label="Maple Warrior level"></select></label>
+                <label><input id="se-toggle" type="checkbox" checked> SE</label>
+                <label class="fixed-buff"><input id="si-toggle" type="checkbox" checked disabled> <span>SI <small>fixed on · canonical timing</small></span></label>
+                <label><input id="echo-toggle" type="checkbox" checked> Echo</label>
+                <label><input id="rage-toggle" type="checkbox" checked> Rage +12</label>
+              </div>
+            </div>
+            <div class="buff-group buff-group-owned">
+              <p class="buff-group-title">Class-owned buffs <small>Visible classes / selected preset</small></p>
+              <div id="class-buff-controls" class="buff-control-grid class-buff-controls" aria-label="Class-owned buffs"></div>
+              <p id="class-buff-empty" class="field-help" hidden>No visible class has a class-owned buff control.</p>
+            </div>
+            <button id="reset-combat" type="button">Reset buffs</button>
+          </fieldset>
+          <p class="field-help">MW changes base AP only. X stays normalized to MW20 clean range. Shad uses its SE-off canonical model. Rage and Dragon Blood are mutually exclusive; SI is fixed on because alternate rotation timing is not verified.</p>
+          <p id="combat-status" class="field-help" aria-live="polite"></p>
+          <div class="class-filter-row">
+            <div>
+              <p class="field-label">Classes shown</p>
+              <p class="field-help">Toggle lines without changing the underlying calculation.</p>
+            </div>
+            <div id="class-toggles" class="class-toggles" aria-label="Classes shown"></div>
+          </div>
+        </section>
+
+
+        <section class="chart-section" data-analysis aria-labelledby="progression-heading">
+          <div class="chart-heading">
+            <div>
+              <p class="eyebrow">Progression curve</p>
+              <h2 id="progression-heading">DPM vs MW20 clean range</h2>
+              <p id="progression-caption" class="chart-caption">Each line follows one class from Entry to End-game.</p>
+            </div>
+            <p id="result-status" class="result-status" aria-live="polite">Preparing view…</p>
+          </div>
+          <div id="progression-chart" class="plot progression-main-plot" role="img" aria-label="DPM progression chart"></div>
+          <p id="progression-focus-status" class="chart-caption" aria-live="polite">Hover a line to focus it. Click to pin or release a class.</p>
+          <div id="progression-notes" class="chart-notes" aria-live="polite"></div>
+          <p id="personal-point-status" class="chart-caption" aria-live="polite" hidden></p>
+          <div id="reference-controls" class="reference-controls" hidden>
+            <div class="reference-toolbar">
+              <div>
+                <p class="field-label">Reference layers</p>
+                <p class="field-help">Each layer follows the class filter. Fury is an alternate polearm configuration.</p>
+              </div>
+              <fieldset class="reference-filters" aria-label="Reference layers">
+                <label><input id="reference-forum-median" type="checkbox" checked> Forum median</label>
+                <label><input id="reference-forum-first" type="checkbox" checked> Forum #1</label>
+                <label><input id="reference-extreme" type="checkbox" checked> Extreme</label>
+                <label><input id="reference-fury" type="checkbox" checked> Fury <small>alternate</small></label>
+              </fieldset>
+              <div class="chart-view-controls">
+                <button id="fit-visible" type="button">Fit visible data</button>
+                <label><input id="y-zero-toggle" type="checkbox" checked> Y-axis from 0</label>
+              </div>
+            </div>
+            <p class="field-help">Stage shapes: circle = Entry · square = Advanced · diamond = Late-game · triangle = End-game. All nine classes have Forum median / #1 references; Extreme exists for DK, NL and Paladin only. Forum / Extreme DPM reproduces p.3 FINAL interpolation/extrapolation of its frozen stage curves, not measured player damage. Reference DPM appears only with Apple / canonical buffs.</p>
+            <details id="range-reference-section" class="range-reference-section" aria-labelledby="range-reference-heading">
+              <summary id="range-reference-heading">Range-only evidence · Published clean-range references</summary>
+              <div class="range-reference-heading">
+                <div>
+                  <p class="eyebrow">Range-only evidence</p>
+
+                </div>
+                <p id="range-reference-empty" class="field-help" hidden>No range-only references are enabled for this view.</p>
+              </div>
+              <div id="range-reference-chart" class="range-reference-chart" role="img" aria-label="Published clean range reference band"></div>
+            <div id="reference-list" class="reference-list"></div>
+            </details>
+          </div>
+          <p id="progression-empty" class="empty-message" hidden>Select at least one class to display the progression chart.</p>
+        </section>
+
+        <section id="user-preset-page" class="detail-section" hidden aria-labelledby="user-preset-heading">
+          <p class="eyebrow">Phase 5</p>
+          <h2 id="user-preset-heading">User Preset</h2>
+          <p>快速核對面板，或依部位建立配裝。計算沿用上方 Buff、藥水、目標數與 WDEF；SI 固定開啟。</p>
+          <div id="preset-tabs" class="preset-tabs" role="tablist" aria-label="Preset slots">
+            <button id="preset-tab-0" type="button" role="tab" aria-controls="preset-editor-0" aria-selected="true" data-preset-slot="0" class="is-active">Preset 1</button>
+            <button id="preset-tab-1" type="button" role="tab" aria-controls="preset-editor-1" aria-selected="false" data-preset-slot="1">Preset 2</button>
+            <button id="preset-tab-2" type="button" role="tab" aria-controls="preset-editor-2" aria-selected="false" data-preset-slot="2">Preset 3</button>
+          </div>
+          <label class="preset-name-field">Preset name <input id="preset-name" type="text" maxlength="30" autocomplete="off" aria-label="Preset name"></label>
+          <div id="preset-comparison" class="preset-comparison" aria-live="polite"></div>
+          <div id="preset-editor">
+            <div id="preset-editor-0" role="tabpanel" aria-labelledby="preset-tab-0"></div>
+            <div id="preset-editor-1" role="tabpanel" aria-labelledby="preset-tab-1" hidden></div>
+            <div id="preset-editor-2" role="tabpanel" aria-labelledby="preset-tab-2" hidden></div>
+          </div>
+        </section>
+
+        <section id="library-page" class="detail-section" hidden aria-labelledby="library-heading">
+          <p class="eyebrow">Open the calculation</p>
+          <h2 id="library-heading">Model Library</h2>
+          <p>Read the model through summaries, tables and calculation traces. Raw JSON stays available at the bottom for advanced inspection.</p>
+          <nav class="library-section-tabs" aria-label="Library sections">
+            <button type="button" data-library-section="classes" aria-pressed="true">Class models</button>
+            <button type="button" data-library-section="mechanics" aria-pressed="false">Mechanics</button>
+            <button type="button" data-library-section="validation" aria-pressed="false">Validation &amp; sources</button>
+          </nav>
+          <div class="library-controls">
+            <label>Class <select id="library-class" aria-label="Library class"></select></label>
+            <label>Stage focus <select id="library-stage" aria-label="Library stage focus"></select></label>
+            <p id="library-context" class="field-help">Class models use the selected stage for the calculation trace and strategy DPM.</p>
+          </div>
+          <div id="library-content"></div>
+        </section>
+
+        <aside class="model-note" aria-label="Model note">
+          <span class="note-icon" aria-hidden="true">i</span>
+          <p><strong>Model note:</strong> v9.5.0 integration · WDEF presets 0–4000 (Lv200 vs same/lower level). Shockwave and summon defense remain assumptions; negative base damage is floored at zero. Bucc 4T/6T workbook reconciliation remains pending. User Preset follows the same models; quick verification does not certify individual equipment requirements. Personal input stays in this browser.</p>
+        </aside>
+      </main>
+
+      <footer class="site-footer">
+        <span>MapleRoyals DPM Lab</span>
+        <span>Phase 5 · User Preset · local-only inputs</span>
+      </footer>
+    </div>
+    <script type="module" src="./ui-app.js"></script>
+  </body>
+</html>

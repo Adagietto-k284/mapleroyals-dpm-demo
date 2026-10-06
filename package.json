@@ -1,0 +1,11 @@
+{
+  "name": "mapleroyals-dpm-demo",
+  "private": true,
+  "type": "module",
+  "version": "0.5.0-phase5",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "dev": "node dev-server.mjs"
+  }
+}
