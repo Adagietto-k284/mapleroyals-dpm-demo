@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": "Published DPM markers apply only to their archived Apple/current +112 canonical settings. Range-only records are vertical guides, not DPM measurements. Guides never define normal gear stages.",
+  "records": [
+    {
+      "id": "nl-median",
+      "classId": "night-lord",
+      "kind": "Forum median",
+      "label": "NL Top10 median",
+      "cleanMax": 11078.5,
+      "dpmM": {
+        "1": 23.447
+      },
+      "source": null,
+      "status": "Published standardized theoretical DPM; not observed combat damage",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "nl-first",
+      "classId": "night-lord",
+      "kind": "Forum #1",
+      "label": "Obfu",
+      "cleanMax": 11541,
+      "dpmM": {
+        "1": 24.153
+      },
+      "source": null,
+      "status": "Published standardized theoretical DPM",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "nl-extreme",
+      "classId": "night-lord",
+      "kind": "Extreme",
+      "label": "Xves",
+      "cleanMax": 12062,
+      "dpmM": {
+        "1": 24.828
+      },
+      "source": null,
+      "status": "Corroborated ceiling; standardized model, not raw Krex DPS",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "shad-median",
+      "classId": "shadower",
+      "kind": "Forum median",
+      "label": "Shad Top10 median",
+      "cleanMax": 13763.5,
+      "dpmM": {
+        "1": 22.1
+      },
+      "source": null,
+      "status": "Published +112 Echo Regular Combo projection",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "shad-first",
+      "classId": "shadower",
+      "kind": "Forum #1",
+      "label": "Shad Forum #1",
+      "cleanMax": 14873,
+      "dpmM": {
+        "1": 23.52
+      },
+      "source": null,
+      "status": "Published +112 Echo Regular Combo projection",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "dk-median",
+      "classId": "dark-knight",
+      "kind": "Forum median",
+      "label": "DK Top10 median",
+      "cleanMax": 13603.5,
+      "dpmM": {},
+      "source": null,
+      "status": "Range only; DPM payload not recovered",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "dk-first",
+      "classId": "dark-knight",
+      "kind": "Forum #1",
+      "label": "Puke",
+      "cleanMax": 15003,
+      "dpmM": {},
+      "source": null,
+      "status": "Range only; DPM payload not recovered",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "sair-median",
+      "classId": "corsair",
+      "kind": "Forum median",
+      "label": "Sair Top10 median",
+      "cleanMin": 5704,
+      "cleanMax": 10356.5,
+      "dpmM": {},
+      "source": null,
+      "status": "Range only; not projected to DPM",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "sair-first",
+      "classId": "corsair",
+      "kind": "Forum #1",
+      "label": "Yanzi",
+      "cleanMin": 6773,
+      "cleanMax": 12215,
+      "dpmM": {},
+      "source": null,
+      "status": "Corroborated range submission; DPM not recovered",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "bm-first",
+      "classId": "bowmaster",
+      "kind": "Forum #1",
+      "label": "Skullflower",
+      "cleanMax": 11655,
+      "dpmM": {},
+      "source": null,
+      "status": "Submitted range; DPM not recovered",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "bm-extreme",
+      "classId": "bowmaster",
+      "kind": "Extreme",
+      "label": "tazan practical ceiling",
+      "cleanMax": 11663,
+      "dpmM": {},
+      "source": null,
+      "status": "Forum-corroborated range; DPM not recovered",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "fury",
+      "classId": "dark-knight",
+      "kind": "Alternate",
+      "label": "Polearm Fury · archived gear",
+      "cleanMax": 14727.79,
+      "dpmM": {
+        "6": 64.25
+      },
+      "targetOnly": 6,
+      "source": null,
+      "status": "p.3 retained 64.25m alternate. X uses archived PSB gear: 217 clean WA, STR 1338/DEX 97, (5STR+DEX)WA/100. Not the revised spear End build.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    }
+  ],
+  "pending": [
+    "Hero and Paladin Forum/Extreme numeric payloads",
+    "Bucc Forum/Extreme numeric payloads",
+    "MM Forum numeric payloads",
+    "Updated polearm-specific gear build",
+    "Multi-target DPM for range-only submissions"
+  ]
+}

@@ -1,0 +1,1231 @@
+{
+  "modelVersion": "v9.4.2",
+  "gear": {
+    "schemaVersion": "1.1.0",
+    "authority": "Master v9.4.2 + recovered class gear artifacts",
+    "gearModelArchive": "reference/archive/mapleroyals_gear_model_archive_v9_4_2.md",
+    "rules": {
+      "level": 200,
+      "mwSkillLevel": 20,
+      "stageOrder": [
+        "Entry",
+        "Advanced",
+        "Late-game",
+        "End-game"
+      ],
+      "targetCounts": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "cleanRangeIsInput": false,
+      "note": "Engine must calculate range from actual stats + clean WA. referenceCleanRange is validation-only."
+    },
+    "classes": {
+      "night-lord": {
+        "stages": {
+          "Entry": {
+            "cleanWa": 140,
+            "stats": {
+              "mw20": {
+                "luk": 1201,
+                "dex": 141,
+                "str": null
+              },
+              "aux": {
+                "strSubtotal": 63
+              }
+            },
+            "referenceCleanRange": {
+              "min": 3554.2416,
+              "max": 6338.64
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Advanced": {
+            "cleanWa": 156,
+            "stats": {
+              "mw20": {
+                "luk": 1219,
+                "dex": 149,
+                "str": null
+              },
+              "aux": {
+                "strSubtotal": 66
+              }
+            },
+            "referenceCleanRange": {
+              "min": 4032.18816,
+              "max": 7181.304
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Late-game": {
+            "cleanWa": 173,
+            "stats": {
+              "mw20": {
+                "luk": 1237,
+                "dex": 146,
+                "str": null
+              },
+              "aux": {
+                "strSubtotal": 62
+              }
+            },
+            "referenceCleanRange": {
+              "min": 4520.01944,
+              "max": 8063.876
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "End-game": {
+            "cleanWa": 184,
+            "stats": {
+              "mw20": {
+                "luk": 1274,
+                "dex": 142,
+                "str": null
+              },
+              "aux": {
+                "strSubtotal": 68
+              }
+            },
+            "referenceCleanRange": {
+              "min": 4943.44704,
+              "max": 8825.376
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          }
+        }
+      },
+      "corsair": {
+        "stages": {
+          "Entry": {
+            "cleanWa": 160,
+            "stats": {
+              "mw20": {
+                "str": 119,
+                "dex": 1208,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 3947.7632,
+              "max": 7148.48
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Advanced": {
+            "cleanWa": 178,
+            "stats": {
+              "mw20": {
+                "str": 118,
+                "dex": 1248,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 4528.51936,
+              "max": 8207.224
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Late-game": {
+            "cleanWa": 206,
+            "stats": {
+              "mw20": {
+                "str": 113,
+                "dex": 1272,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 5326.68208,
+              "max": 9665.932
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "End-game": {
+            "cleanWa": 219,
+            "stats": {
+              "mw20": {
+                "str": 122,
+                "dex": 1306,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 5827.29216,
+              "max": 10563.684
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          }
+        }
+      },
+      "shadower": {
+        "stages": {
+          "Entry": {
+            "cleanWa": 193,
+            "stats": {
+              "mw20": {
+                "str": 84,
+                "dex": 154,
+                "luk": 1220
+              }
+            },
+            "referenceCleanRange": {
+              "min": 5037,
+              "max": 8936
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Advanced": {
+            "cleanWa": 211,
+            "stats": {
+              "mw20": {
+                "str": 87,
+                "dex": 156,
+                "luk": 1244
+              }
+            },
+            "referenceCleanRange": {
+              "min": 5615,
+              "max": 9962
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Late-game": {
+            "cleanWa": 229,
+            "stats": {
+              "mw20": {
+                "str": 101,
+                "dex": 161,
+                "luk": 1272
+              }
+            },
+            "referenceCleanRange": {
+              "min": 6263,
+              "max": 11086
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "End-game": {
+            "cleanWa": 245,
+            "stats": {
+              "mw20": {
+                "str": 120,
+                "dex": 168,
+                "luk": 1288
+              }
+            },
+            "referenceCleanRange": {
+              "min": 6840,
+              "max": 12066
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          }
+        }
+      },
+      "bowmaster": {
+        "stages": {
+          "Entry": {
+            "cleanWa": 184,
+            "stats": {
+              "mw20": {
+                "str": 110,
+                "dex": 1217,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 6369.37712,
+              "max": 7815.952
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Advanced": {
+            "cleanWa": 201,
+            "stats": {
+              "mw20": {
+                "str": 109,
+                "dex": 1257,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 7177.26378,
+              "max": 8809.428
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Late-game": {
+            "cleanWa": 237,
+            "stats": {
+              "mw20": {
+                "str": 109,
+                "dex": 1276,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 8586.75648,
+              "max": 10540.338
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "End-game": {
+            "cleanWa": 251,
+            "stats": {
+              "mw20": {
+                "str": 122,
+                "dex": 1306,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 9333.99724,
+              "max": 11451.624
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          }
+        }
+      },
+      "dark-knight": {
+        "stages": {
+          "Entry": {
+            "cleanWa": 161,
+            "stats": {
+              "mw20": {
+                "str": 1204,
+                "dex": 99,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 7137.774,
+              "max": 9851.59
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Advanced": {
+            "cleanWa": 178,
+            "stats": {
+              "mw20": {
+                "str": 1218,
+                "dex": 110,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 8000.744,
+              "max": 11036
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Late-game": {
+            "cleanWa": 194,
+            "stats": {
+              "mw20": {
+                "str": 1273,
+                "dex": 85,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 9055.532,
+              "max": 12513
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "End-game": {
+            "cleanWa": 212,
+            "stats": {
+              "mw20": {
+                "str": 1338,
+                "dex": 97,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 10417.256,
+              "max": 14388.44
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          }
+        }
+      },
+      "hero": {
+        "stages": {
+          "Entry": {
+            "cleanWa": 172,
+            "stats": {
+              "mw20": {
+                "str": 1204,
+                "dex": 99,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 5314.34592,
+              "max": 9696.328
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Advanced": {
+            "cleanWa": 191,
+            "stats": {
+              "mw20": {
+                "str": 1219,
+                "dex": 110,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 5993.57236,
+              "max": 10920.234
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Late-game": {
+            "cleanWa": 209,
+            "stats": {
+              "mw20": {
+                "str": 1251,
+                "dex": 116,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 6737.08156,
+              "max": 12269.554
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "End-game": {
+            "cleanWa": 223,
+            "stats": {
+              "mw20": {
+                "str": 1338,
+                "dex": 97,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 7627.92016,
+              "max": 13941.514
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          }
+        }
+      },
+      "buccaneer": {
+        "stages": {
+          "Entry": {
+            "cleanWa": 147,
+            "stats": {
+              "mw20": {
+                "str": 1180,
+                "dex": 102,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 4646,
+              "max": 8476
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Advanced": {
+            "cleanWa": 162,
+            "stats": {
+              "mw20": {
+                "str": 1199,
+                "dex": 118,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 5226,
+              "max": 9515
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Late-game": {
+            "cleanWa": 183,
+            "stats": {
+              "mw20": {
+                "str": 1230,
+                "dex": 129,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 6070,
+              "max": 11040
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "End-game": {
+            "cleanWa": 194,
+            "stats": {
+              "mw20": {
+                "str": 1267,
+                "dex": 136,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 6635,
+              "max": 12062
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          }
+        }
+      },
+      "marksman": {
+        "stages": {
+          "Entry": {
+            "cleanWa": 192,
+            "stats": {
+              "mw20": {
+                "str": 110,
+                "dex": 1217,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 7781.9136,
+              "max": 8623.104
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Advanced": {
+            "cleanWa": 209,
+            "stats": {
+              "mw20": {
+                "str": 109,
+                "dex": 1257,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 8739.7112,
+              "max": 9685.478
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Late-game": {
+            "cleanWa": 245,
+            "stats": {
+              "mw20": {
+                "str": 109,
+                "dex": 1276,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 10395.938,
+              "max": 11521.37
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "End-game": {
+            "cleanWa": 259,
+            "stats": {
+              "mw20": {
+                "str": 122,
+                "dex": 1306,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 11275.4096,
+              "max": 12493.124
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          }
+        }
+      },
+      "paladin": {
+        "stages": {
+          "Entry": {
+            "cleanWa": 172,
+            "stats": {
+              "mw20": {
+                "str": 1204,
+                "dex": 99,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 5314.34592,
+              "max": 9696.328
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Advanced": {
+            "cleanWa": 191,
+            "stats": {
+              "mw20": {
+                "str": 1219,
+                "dex": 110,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 5993.57236,
+              "max": 10920.234
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "Late-game": {
+            "cleanWa": 209,
+            "stats": {
+              "mw20": {
+                "str": 1251,
+                "dex": 116,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 6737.08156,
+              "max": 12269.554
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          },
+          "End-game": {
+            "cleanWa": 223,
+            "stats": {
+              "mw20": {
+                "str": 1338,
+                "dex": 97,
+                "luk": null
+              }
+            },
+            "referenceCleanRange": {
+              "min": 7627.92016,
+              "max": 13941.514
+            },
+            "rangeAnchorRole": "checksum-only",
+            "pendingStatBreakdown": false
+          }
+        }
+      }
+    }
+  },
+  "skills": {
+    "schemaVersion": "1.0.0",
+    "lineCap": 199999,
+    "classes": {
+      "hero": {
+        "canonical": {
+          "id": "brandish",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "targetCap": 3,
+          "params": {
+            "brandishSkillPct": 2.6,
+            "advancedComboAttackMultiplier": 1.9,
+            "lines": 2,
+            "seCritRate": 0.15,
+            "seSkillAdd": 1.4,
+            "cycleSeconds": 0.63,
+            "enrageAverageWa": 17.333333333333332
+          }
+        },
+        "branches": [],
+        "_modelVersion": "v9.4.2"
+      },
+      "dark-knight": {
+        "canonical": {
+          "id": "spear-crusher",
+          "targets": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "targetCap": 3,
+          "params": {
+            "skillPct": 1.7,
+            "lines": 3,
+            "seAverageLineCoefficient": 1.91,
+            "cycleSeconds": 0.81,
+            "berserkMultiplier": 2.1
+          }
+        },
+        "branches": [
+          {
+            "id": "polearm-fury",
+            "role": "alternate",
+            "targets": [
+              3,
+              4,
+              6
+            ],
+            "uiTargetCounts": [
+              3,
+              4,
+              6
+            ],
+            "documentationOnlyTargetCounts": [
+              5
+            ],
+            "gearOverride": {
+              "weapon": "144/21 Purple Surfboard",
+              "cleanWa": 217
+            },
+            "params": {
+              "skillPct": 2.5,
+              "castsPerMinute": 94,
+              "berserkMultiplier": 2.1
+            }
+          }
+        ],
+        "_modelVersion": "v9.4.2"
+      },
+      "paladin": {
+        "canonicalCondition": "general-weak",
+        "conditions": [
+          "neutral",
+          "general-weak",
+          "holy-weak"
+        ],
+        "selectors": {
+          "1": {
+            "skill": "blast"
+          },
+          "2+": {
+            "skill": "acb"
+          }
+        },
+        "params": {
+          "blastSkill": 5.8,
+          "blastCycleSeconds": 0.63,
+          "acbSkill": 3.5,
+          "acbCycleSeconds": 0.6,
+          "elementMultipliers": {
+            "neutral": 1.4,
+            "general-weak": 1.95,
+            "holy-weak": 2.1
+          }
+        },
+        "_modelVersion": "v9.4.2"
+      },
+      "bowmaster": {
+        "params": {
+          "hurricaneNormalPct": 1,
+          "arrowRainNormalPct": 1.6,
+          "criticalBaseRate": 0.4,
+          "seCritRateAdd": 0.15,
+          "criticalBaseAdd": 1,
+          "seSkillAdd": 1.4,
+          "hurricaneArrowsPerMinute": 500,
+          "arrowRainArrowsPerMinute": 100,
+          "phoenixBaseFactor": 2.125,
+          "phoenixSkillPct": 5.5,
+          "phoenixAttacksPerMinute": 15
+        },
+        "selectors": {
+          "1-3": {
+            "skill": "hurricane"
+          },
+          "4-6": {
+            "skill": "arrow-rain"
+          }
+        },
+        "summon": {
+          "id": "phoenix",
+          "maxTargets": 4
+        },
+        "_modelVersion": "v9.4.2"
+      },
+      "marksman": {
+        "params": {
+          "strafeNormalPct": 1.25,
+          "criticalBaseRate": 0.4,
+          "seCritRateAdd": 0.15,
+          "criticalBaseAdd": 1,
+          "seSkillAdd": 1.4,
+          "frostpreyBaseFactor": 2.125,
+          "frostpreySkillPct": 6,
+          "frostpreyAttacksPerMinute": 14.285714285714286
+        },
+        "selectors": {
+          "1-2": {
+            "mode": "canonical",
+            "branch": "snipe-plus-7-strafe",
+            "alternates": [
+              "pure-strafe"
+            ]
+          },
+          "3-6": {
+            "mode": "canonical",
+            "branch": "pa-1.40"
+          }
+        },
+        "branches": {
+          "pure-strafe": {
+            "role": "candidate"
+          },
+          "snipe-plus-7-strafe": {
+            "role": "candidate",
+            "params": {
+              "snipeDamage": 199999,
+              "rotationActions": 8,
+              "cycleSeconds": 5.04,
+              "strafeExpectedCastCoeff": 10.28
+            }
+          },
+          "pa-1.40": {
+            "role": "canonical",
+            "params": {
+              "cycleSeconds": 1.4,
+              "successiveTargetMultiplier": 1.2,
+              "capOrder": "before-pierce"
+            }
+          },
+          "pa-1.20": {
+            "role": "theoretical",
+            "params": {
+              "cycleSeconds": 1.2,
+              "successiveTargetMultiplier": 1.2,
+              "capOrder": "before-pierce"
+            }
+          }
+        },
+        "summon": {
+          "id": "frostprey",
+          "maxTargets": 4
+        },
+        "_modelVersion": "v9.4.2"
+      },
+      "night-lord": {
+        "params": {
+          "ttBaseLukFactor": 3.75,
+          "ttSkillPct": 1.5,
+          "avengerSkillPct": 2,
+          "criticalThrowRate": 0.5,
+          "seCritRate": 0.15,
+          "criticalThrowAdd": 1,
+          "seSkillAdd": 1.4,
+          "ttShadowPartnerLines": 4.5,
+          "avengerShadowPartnerMultiplier": 1.5,
+          "ttCycleSeconds": 0.6,
+          "avengerCycleSeconds": 0.63,
+          "clawMinLukFactor": 1.944,
+          "clawMaxLukFactor": 3.6
+        },
+        "selectors": {
+          "1-3": {
+            "skill": "tt-sp"
+          },
+          "4-6": {
+            "skill": "avenger"
+          }
+        },
+        "branches": {
+          "tt-sp": {
+            "role": "canonical"
+          },
+          "avenger": {
+            "role": "canonical"
+          }
+        },
+        "_modelVersion": "v9.4.2"
+      },
+      "corsair": {
+        "params": {
+          "cannonSkillPct": 3.8,
+          "cannonLines": 4,
+          "bullseyeMultiplier": 1.2,
+          "seCritRate": 0.15,
+          "seSkillAdd": 1.4,
+          "cannonCycleSeconds": 0.6,
+          "torpedoMarkedPctPerSecond": 13.29,
+          "torpedoSecondaryPctPerSecond": 11.21
+        },
+        "selectors": {
+          "1-2": {
+            "skill": "cannon"
+          },
+          "3-6": {
+            "skill": "torpedo"
+          }
+        },
+        "branches": {
+          "cannon": {
+            "role": "canonical"
+          },
+          "torpedo": {
+            "role": "canonical"
+          }
+        },
+        "_modelVersion": "v9.4.2"
+      },
+      "shadower": {
+        "selectors": {
+          "1-2": {
+            "skill": "assassinate-bstep"
+          },
+          "3-6": {
+            "skill": "bstep-bot"
+          }
+        },
+        "branches": {
+          "assassinate-bstep": {
+            "role": "canonical",
+            "params": {
+              "cycleSeconds": 1.9353,
+              "assassinate": {
+                "skillPct": 9.5,
+                "lines": 3
+              },
+              "boomerangStep": {
+                "skillPct": 6,
+                "lines": 2
+              }
+            }
+          },
+          "bstep-bot": {
+            "role": "canonical",
+            "params": {
+              "cycleSeconds": 1.1011,
+              "boomerangStep": {
+                "skillPct": 6,
+                "lines": 2,
+                "maxTargets": 4
+              },
+              "bandOfThieves": {
+                "skillPct": 2.5,
+                "maxTargets": 6
+              }
+            }
+          }
+        },
+        "excluded": [
+          "meso-explosion"
+        ],
+        "_modelVersion": "v9.4.2"
+      },
+      "buccaneer": {
+        "canonical": {
+          "id": "sustained-cap-aware",
+          "stUptime": 0.75,
+          "nonStUptime": 0.25,
+          "lineByLineBarrageCap": true,
+          "dsSnatchCycleSeconds": 1.653,
+          "sourceStatus": "frozen-authoritative",
+          "sourceRefs": [
+            "24_bucc_barrage_exact_cap_audit.md",
+            "13_bucc_ds_snatch_60fps_timing_audit.md"
+          ],
+          "sourceEvidence": "統整MapleRoyals進度: Bucc target strategy table",
+          "exactModel": {
+            "damageCap": 199999,
+            "stUptime": 0.75,
+            "nonStUptime": 0.25,
+            "dsSnatchCycleSeconds": 1.653,
+            "skills": {
+              "barrage": {
+                "lineByLineCap": true,
+                "lineMultipliers": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  2,
+                  4
+                ],
+                "lines": [
+                  {
+                    "coefficient": 3.3,
+                    "criticalCoefficient": 4.7,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 3.3,
+                    "criticalCoefficient": 4.7,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 3.3,
+                    "criticalCoefficient": 4.7,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 3.3,
+                    "criticalCoefficient": 4.7,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 6.6,
+                    "criticalCoefficient": 9.4,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 13.2,
+                    "criticalCoefficient": 18.8,
+                    "criticalChance": 0.15
+                  }
+                ]
+              },
+              "demolition": {
+                "lines": [
+                  {
+                    "coefficient": 5,
+                    "criticalCoefficient": 6.4,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 5,
+                    "criticalCoefficient": 6.4,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 5,
+                    "criticalCoefficient": 6.4,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 5,
+                    "criticalCoefficient": 6.4,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 5,
+                    "criticalCoefficient": 6.4,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 5,
+                    "criticalCoefficient": 6.4,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 5,
+                    "criticalCoefficient": 6.4,
+                    "criticalChance": 0.15
+                  },
+                  {
+                    "coefficient": 5,
+                    "criticalCoefficient": 6.4,
+                    "criticalChance": 0.15
+                  }
+                ]
+              },
+              "dragon-strike": {
+                "targetMultipliers": {
+                  "1": 1,
+                  "2": 2,
+                  "3": 3,
+                  "4": 4,
+                  "6": 6
+                },
+                "lines": [
+                  {
+                    "coefficient": 9,
+                    "criticalCoefficient": 10.4,
+                    "criticalChance": 0.15
+                  }
+                ]
+              },
+              "snatch": {
+                "targetMultipliers": {
+                  "1": 1,
+                  "2": 2,
+                  "3": 3,
+                  "4": 4,
+                  "6": 6
+                },
+                "lines": [
+                  {
+                    "coefficient": 6,
+                    "criticalCoefficient": 7.4,
+                    "criticalChance": 0.15
+                  }
+                ]
+              }
+            },
+            "selectors": {
+              "1": {
+                "st": {
+                  "id": "barrage-demolition",
+                  "cycleSeconds": 4.17,
+                  "actions": [
+                    {
+                      "skill": "barrage"
+                    },
+                    {
+                      "skill": "demolition"
+                    }
+                  ]
+                },
+                "nonSt": {
+                  "id": "barrage-dragon-strike",
+                  "cycleSeconds": 2.91,
+                  "actions": [
+                    {
+                      "skill": "barrage"
+                    },
+                    {
+                      "skill": "dragon-strike"
+                    }
+                  ]
+                }
+              },
+              "2": {
+                "st": {
+                  "id": "barrage-dragon-strike",
+                  "cycleSeconds": 2.91,
+                  "actions": [
+                    {
+                      "skill": "barrage"
+                    },
+                    {
+                      "skill": "dragon-strike"
+                    }
+                  ]
+                },
+                "nonSt": {
+                  "id": "barrage-dragon-strike",
+                  "cycleSeconds": 2.91,
+                  "actions": [
+                    {
+                      "skill": "barrage"
+                    },
+                    {
+                      "skill": "dragon-strike"
+                    }
+                  ]
+                }
+              },
+              "3": {
+                "st": {
+                  "id": "dragon-strike-snatch",
+                  "cycleSeconds": 1.653,
+                  "actions": [
+                    {
+                      "skill": "dragon-strike"
+                    },
+                    {
+                      "skill": "snatch"
+                    }
+                  ]
+                },
+                "nonSt": {
+                  "id": "barrage-dragon-strike",
+                  "cycleSeconds": 2.91,
+                  "actions": [
+                    {
+                      "skill": "barrage"
+                    },
+                    {
+                      "skill": "dragon-strike"
+                    }
+                  ]
+                }
+              },
+              "4": {
+                "st": {
+                  "id": "dragon-strike-snatch",
+                  "cycleSeconds": 1.653,
+                  "actions": [
+                    {
+                      "skill": "dragon-strike"
+                    },
+                    {
+                      "skill": "snatch"
+                    }
+                  ]
+                },
+                "nonSt": {
+                  "id": "barrage-dragon-strike",
+                  "cycleSeconds": 2.91,
+                  "actions": [
+                    {
+                      "skill": "barrage"
+                    },
+                    {
+                      "skill": "dragon-strike"
+                    }
+                  ]
+                }
+              },
+              "6": {
+                "st": {
+                  "id": "dragon-strike-snatch",
+                  "cycleSeconds": 1.653,
+                  "actions": [
+                    {
+                      "skill": "dragon-strike"
+                    },
+                    {
+                      "skill": "snatch"
+                    }
+                  ]
+                },
+                "nonSt": {
+                  "id": "barrage-dragon-strike",
+                  "cycleSeconds": 2.91,
+                  "actions": [
+                    {
+                      "skill": "barrage"
+                    },
+                    {
+                      "skill": "dragon-strike"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "_modelVersion": "v9.4.2"
+      }
+    }
+  }
+}
