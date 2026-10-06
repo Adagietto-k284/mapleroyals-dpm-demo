@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceModelVersion": "v9.5.0",
+  "integrationStatus": "confirmed-inputs-integrated; bucc-workbook-parity-pending",
+  "retrievedOn": "2026-09-08",
+  "sources": [
+    {
+      "title": "統整MapleRoyals進度 p.3",
+      "url": null,
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "title": "重算戰士裝備模型",
+      "url": null,
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "title": "建立弓手裝備進程 model",
+      "url": null,
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "title": "整理 Buccaneer 公式",
+      "url": null,
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    }
+  ],
+  "referencePrecision": {
+    "warriorEndDpmM": 0.001,
+    "marksmanEndDpmM": 0.001,
+    "marksmanStageDpmM": 0.01,
+    "buccDpmM": 0.001
+  },
+  "warriorEndDpmM": {
+    "hero": [
+      17.575,
+      35.149,
+      52.724,
+      52.724,
+      52.724
+    ],
+    "dark-knight": [
+      17.765,
+      35.53,
+      53.295,
+      53.295,
+      53.295
+    ],
+    "paladin": [
+      17.541,
+      24.63,
+      36.945,
+      49.26,
+      73.89
+    ]
+  },
+  "marksmanEndDpmM": {
+    "3": 18.293,
+    "4": 32.97,
+    "6": 60.145
+  },
+  "marksmanStageDpmM": {
+    "Entry": [
+      14.65,
+      25.34,
+      46.08
+    ],
+    "Advanced": [
+      15.7,
+      27.55,
+      50.15
+    ],
+    "Late-game": [
+      17.33,
+      30.98,
+      56.49
+    ],
+    "End-game": [
+      18.29,
+      32.97,
+      60.14
+    ]
+  },
+  "buccPublishedDpmM": {
+    "Entry": {
+      "4": 25.108,
+      "6": 37.662
+    },
+    "Advanced": {
+      "4": 27.098,
+      "6": 40.646
+    },
+    "Late-game": {
+      "4": 29.959,
+      "6": 44.939
+    },
+    "End-game": {
+      "4": 32.016,
+      "6": 48.024
+    }
+  },
+  "buccParity": {
+    "status": "open",
+    "reason": "p.3 derives outputs from frozen 4T/6T slope; direct per-line engine differs. Do not calibrate coefficients from rounded DPM.",
+    "shockwaveCoefficientEvidence": "700% derived from reported (DS 900% + Shockwave) * 3 / 2.4 = 2000%/s",
+    "criticalRule": "existing additive SE +140% at 15% chance",
+    "transformationAssumption": "Regular Transformation available throughout the 60s non-ST window; cast/positioning cost omitted",
+    "engineEndDpmM": {
+      "4": 32.04177165167278,
+      "6": 48.06265747750916
+    }
+  },
+  "pendingWarriorStages": {
+    "stages": [
+      "Advanced",
+      "Late-game"
+    ],
+    "status": "discussion-only",
+    "rule": "Keep frozen totals until per-slot review produces confirmed replacements. Do not use diagnostic linearized STR values."
+  },
+  "chartRequirements": {
+    "xAxis": "MW20 clean max",
+    "yAxis": "DPM (millions/minute)",
+    "stages": 4,
+    "targetCounts": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ],
+    "overlays": [
+      "Forum Top10 median",
+      "Forum #1",
+      "Extreme"
+    ],
+    "guides": "dashed from the corresponding class End-game point",
+    "exclude": [
+      "Stonetooth"
+    ],
+    "polearmFury": {
+      "targetCount": 6,
+      "dpmM": 64.25,
+      "role": "standalone alternate",
+      "rangeAnchorStatus": "pending exact polearm gear; do not reuse spear range as exact"
+    }
+  },
+  "forumRecovered": {
+    "classId": "dark-knight",
+    "medianMax": 13603.5,
+    "rank1Max": 15003,
+    "rank1Name": "Puke",
+    "status": "p.3 reported snapshot; not a new live forum verification",
+    "dpm": null
+  },
+  "artifactStatus": "Chat message contents recovered. Generated workbook/chart references are unresolved content-reference placeholders; original v9.5.0 binary artifacts not imported."
+}

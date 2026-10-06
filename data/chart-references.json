@@ -1,0 +1,444 @@
+{
+  "schemaVersion": "1.1.0",
+  "policy": "Forum/Extreme reproduce p.3 FINAL chart projections under archived Apple/canonical buffs, not measured player DPM. Missing DPM remains range-only. Source method and frozen inputs are archived separately.",
+  "sourceSnapshot": "reference/archive/forum-p3-final-source.json",
+  "records": [
+    {
+      "id": "dark-knight-median",
+      "classId": "dark-knight",
+      "kind": "Forum median",
+      "label": "Dark Knight Top10 median",
+      "cleanMax": 13603.5,
+      "dpmM": {
+        "1": 16.557161284999154,
+        "2": 33.11432256999831,
+        "3": 49.67148385499746,
+        "4": 49.67148385499746,
+        "6": 49.67148385499746
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Normal/Fast/Faster Spear",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "dark-knight-first",
+      "classId": "dark-knight",
+      "kind": "Forum #1",
+      "label": "Puke",
+      "cleanMax": 15003,
+      "dpmM": {
+        "1": 18.347921589302057,
+        "2": 36.695843178604115,
+        "3": 55.043764767906175,
+        "4": 55.043764767906175,
+        "6": 55.043764767906175
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Normal/Fast/Faster Spear",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "dark-knight-extreme",
+      "classId": "dark-knight",
+      "kind": "Extreme",
+      "label": "awlz · Sky Ski (Krex)",
+      "cleanMax": 16292,
+      "dpmM": {
+        "1": 19.9972892436404,
+        "2": 39.9945784872807,
+        "3": 59.9918677309211,
+        "4": 59.9918677309211,
+        "6": 59.9918677309211
+      },
+      "observedDps": 340599,
+      "testPotionWa": 140,
+      "source": "https://royals.ms/forum/threads/krex-class-dps-comparison.224575/",
+      "forumSource": "https://royals.ms/forum/threads/krex-class-dps-comparison.224575/",
+      "category": "Sky Ski",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "Chart DPM is a p.3 FINAL curve estimate at MW20 clean max 16,292 under canonical Apple +100 conditions, not measured damage. Separate historical Krex 2nd Eye observation: Sky Ski, 340,599 measured DPS with a +140 W.att potion. Do not compare the two as matching combat conditions."
+    },
+    {
+      "id": "hero-median",
+      "classId": "hero",
+      "kind": "Forum median",
+      "label": "Hero Top10 median",
+      "cleanMax": 13477.5,
+      "dpmM": {
+        "1": 16.734425971209415,
+        "2": 33.468190355085945,
+        "3": 50.2026163262957,
+        "4": 50.2026163262957,
+        "6": 50.2026163262957
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Sword",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "hero-first",
+      "classId": "hero",
+      "kind": "Forum #1",
+      "label": "tomwzhere",
+      "cleanMax": 15595,
+      "dpmM": {
+        "1": 19.615088856094058,
+        "2": 39.228356378328996,
+        "3": 58.843445234422234,
+        "4": 58.843445234422234,
+        "6": 58.843445234422234
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Sword",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "paladin-median",
+      "classId": "paladin",
+      "kind": "Forum median",
+      "label": "Paladin Top10 median",
+      "cleanMax": 13220.5,
+      "dpmM": {
+        "1": 17.007521092832604,
+        "2": 23.352396016679478,
+        "3": 35.02859402501922,
+        "4": 46.704792033358956,
+        "6": 70.05718805003843
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Sword",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "paladin-first",
+      "classId": "paladin",
+      "kind": "Forum #1",
+      "label": "prolly",
+      "cleanMax": 14291,
+      "dpmM": {
+        "1": 17.660280967424775,
+        "2": 24.915660477047503,
+        "3": 37.37349071557125,
+        "4": 49.831320954095006,
+        "6": 74.7469814311425
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Sword",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "paladin-extreme",
+      "classId": "paladin",
+      "kind": "Extreme",
+      "label": "awladin",
+      "cleanMax": 14393,
+      "dpmM": {
+        "1": 17.722477611243928,
+        "2": 25.064612345293682,
+        "3": 37.59691851794053,
+        "4": 50.129224690587364,
+        "6": 75.19383703588106
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Sword",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "corsair-median",
+      "classId": "corsair",
+      "kind": "Forum median",
+      "label": "Corsair Top10 median",
+      "cleanMax": 10356.5,
+      "dpmM": {
+        "1": 24.419346782410386,
+        "2": 24.419346782410386,
+        "3": 27.182508528674404,
+        "4": 35.71557827402417,
+        "6": 52.78171776472371
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Corsair",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "corsair-first",
+      "classId": "corsair",
+      "kind": "Forum #1",
+      "label": "Yanzi",
+      "cleanMax": 12215,
+      "dpmM": {
+        "1": 27.79599777088574,
+        "2": 27.79599777088574,
+        "3": 30.9412431545614,
+        "4": 40.65424611627053,
+        "6": 60.0802520396888
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Corsair",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "shadower-median",
+      "classId": "shadower",
+      "kind": "Forum median",
+      "label": "Shadower Top10 median",
+      "cleanMax": 13763.5,
+      "dpmM": {
+        "1": 19.926363136040617,
+        "2": 25.830470731904512,
+        "3": 37.61696978907296,
+        "4": 50.155959718763974,
+        "6": 54.4797493496919
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Shadower",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "shadower-first",
+      "classId": "shadower",
+      "kind": "Forum #1",
+      "label": "BigNewNew",
+      "cleanMax": 14873,
+      "dpmM": {
+        "1": 21.193828544709298,
+        "2": 27.473481446845394,
+        "3": 40.00968980832973,
+        "4": 53.346253077773014,
+        "6": 57.94506799827069
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Shadower",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "buccaneer-median",
+      "classId": "buccaneer",
+      "kind": "Forum median",
+      "label": "Buccaneer Top10 median",
+      "cleanMax": 12276,
+      "dpmM": {
+        "1": 15.970547945205478,
+        "2": 16.56054794520548,
+        "3": 24.448277886497063,
+        "4": 32.447005785009395,
+        "6": 48.67050867751411
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Buccaneer",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "buccaneer-first",
+      "classId": "buccaneer",
+      "kind": "Forum #1",
+      "label": "IkutaErika",
+      "cleanMax": 14672,
+      "dpmM": {
+        "1": 18.103972602739724,
+        "2": 18.693972602739727,
+        "3": 28.01180039138943,
+        "4": 37.26927989328476,
+        "6": 55.90391983992716
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "Buccaneer",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "night-lord-median",
+      "classId": "night-lord",
+      "kind": "Forum median",
+      "label": "Night Lord Top10 median",
+      "cleanMax": 11078.5,
+      "dpmM": {
+        "1": 24.15394988322278,
+        "2": 24.15394988322278,
+        "3": 24.15394988322278,
+        "4": 27.8725404604881,
+        "6": 41.80881068529395
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "NL",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "night-lord-first",
+      "classId": "night-lord",
+      "kind": "Forum #1",
+      "label": "Obfu",
+      "cleanMax": 11541,
+      "dpmM": {
+        "1": 24.954984078052064,
+        "2": 24.954984078052064,
+        "3": 24.954984078052064,
+        "4": 28.78431134067523,
+        "6": 43.17646700466361
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "NL",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "night-lord-extreme",
+      "classId": "night-lord",
+      "kind": "Extreme",
+      "label": "Xves",
+      "cleanMax": 12062,
+      "dpmM": {
+        "1": 25.857338273740837,
+        "2": 25.857338273740837,
+        "3": 25.857338273740837,
+        "4": 29.81140891597792,
+        "6": 44.71711336659138
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "NL",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "marksman-median",
+      "classId": "marksman",
+      "kind": "Forum median",
+      "label": "Marksman Top10 median",
+      "cleanMax": 10756,
+      "dpmM": {
+        "1": 16.172408342067246,
+        "2": 16.412722738612562,
+        "3": 16.65303713515788,
+        "4": 29.55043052843721,
+        "6": 53.846540780759184
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "MM",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "marksman-first",
+      "classId": "marksman",
+      "kind": "Forum #1",
+      "label": "anglerfish2",
+      "cleanMax": 13018,
+      "dpmM": {
+        "1": 18.30728234407074,
+        "2": 18.559171358630547,
+        "3": 18.811060373190355,
+        "4": 34.043942553056326,
+        "6": 62.119455271209205
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "MM",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "bowmaster-median",
+      "classId": "bowmaster",
+      "kind": "Forum median",
+      "label": "Bowmaster Top10 median",
+      "cleanMax": 10907.5,
+      "dpmM": {
+        "1": 17.68541507905488,
+        "2": 17.9206574753347,
+        "3": 18.15589987161452,
+        "4": 18.51148828651494,
+        "6": 27.29674763721277
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "BM",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "bowmaster-first",
+      "classId": "bowmaster",
+      "kind": "Forum #1",
+      "label": "Skullflower",
+      "cleanMax": 11655,
+      "dpmM": {
+        "1": 18.627942915217183,
+        "2": 18.868379154662048,
+        "3": 19.108815394106905,
+        "4": 19.476062025341168,
+        "6": 28.73322055912203
+      },
+      "source": null,
+      "forumSource": "https://royals.ms/forum/threads/mapleroyals-official-damage-range-thread.177089/",
+      "category": "BM",
+      "dpmBasis": "p3-final-interpolation",
+      "status": "p.3 FINAL chart projection: piecewise interpolation/extrapolation of frozen stage DPM versus clean max range. Not measured player DPM or a reconstructed player gear profile.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    },
+    {
+      "id": "fury",
+      "classId": "dark-knight",
+      "kind": "Alternate",
+      "label": "Polearm Fury · p.3 FINAL",
+      "cleanMax": 14890.54,
+      "dpmM": {
+        "6": 64.2514
+      },
+      "targetOnly": 6,
+      "source": null,
+      "dpmBasis": "published-alternate",
+      "status": "p.3 FINAL Alternates row: source range anchor 14890.54, 6T 64.2514m. Standalone alternate, not the spear mainline.",
+      "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+    }
+  ],
+  "pending": []
+}

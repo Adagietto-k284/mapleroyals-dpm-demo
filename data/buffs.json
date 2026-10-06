@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "echo": {
+    "kind": "multiplicativeWa",
+    "multiplier": 1.04,
+    "order": "after-additive-wa"
+  },
+  "rage": {
+    "kind": "additiveWa",
+    "wa": 12,
+    "stackGroup": "class-wa-12",
+    "exclusiveWith": [
+      "dragonBlood"
+    ]
+  },
+  "dragonBlood": {
+    "kind": "additiveWa",
+    "wa": 12,
+    "stackGroup": "class-wa-12",
+    "exclusiveWith": [
+      "rage"
+    ]
+  },
+  "enrage": {
+    "kind": "timeAveragedAdditiveWa",
+    "activeWa": 26,
+    "uptime": {
+      "activeSeconds": 240,
+      "cycleSeconds": 360
+    },
+    "averageWa": 17.333333333333332,
+    "stackableWith": [
+      "rage",
+      "potions"
+    ]
+  },
+  "profiles": {
+    "standard": {
+      "additiveBuffIds": [
+        "rage"
+      ],
+      "multiplicativeBuffIds": [
+        "echo"
+      ]
+    },
+    "hero": {
+      "additiveBuffIds": [
+        "rage",
+        "enrage"
+      ],
+      "multiplicativeBuffIds": [
+        "echo"
+      ]
+    },
+    "dark-knight": {
+      "oneOfAdditiveBuffIds": [
+        [
+          "rage",
+          "dragonBlood"
+        ]
+      ],
+      "multiplicativeBuffIds": [
+        "echo"
+      ]
+    }
+  }
+}

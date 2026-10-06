@@ -1,0 +1,596 @@
+{
+  "schemaVersion": "1.0.0",
+  "lineCap": 199999,
+  "classes": {
+    "hero": {
+      "canonical": {
+        "id": "brandish",
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "targetCap": 3,
+        "params": {
+          "brandishSkillPct": 2.6,
+          "advancedComboAttackMultiplier": 1.9,
+          "lines": 2,
+          "seCritRate": 0.15,
+          "seSkillAdd": 1.4,
+          "cycleSeconds": 0.63,
+          "enrageAverageWa": 17.333333333333332
+        }
+      },
+      "branches": []
+    },
+    "dark-knight": {
+      "canonical": {
+        "id": "spear-crusher",
+        "targets": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "targetCap": 3,
+        "params": {
+          "skillPct": 1.7,
+          "lines": 3,
+          "seAverageLineCoefficient": 1.91,
+          "cycleSeconds": 0.81,
+          "berserkMultiplier": 2.1
+        }
+      },
+      "branches": [
+        {
+          "id": "polearm-fury",
+          "role": "alternate",
+          "targets": [
+            3,
+            4,
+            6
+          ],
+          "uiTargetCounts": [
+            3,
+            4,
+            6
+          ],
+          "documentationOnlyTargetCounts": [
+            5
+          ],
+          "gearOverride": {
+            "weapon": "144/21 Purple Surfboard",
+            "cleanWa": 217
+          },
+          "params": {
+            "skillPct": 2.5,
+            "castsPerMinute": 94,
+            "berserkMultiplier": 2.1
+          }
+        }
+      ]
+    },
+    "paladin": {
+      "canonicalCondition": "general-weak",
+      "conditions": [
+        "neutral",
+        "general-weak",
+        "holy-weak"
+      ],
+      "selectors": {
+        "1": {
+          "skill": "blast"
+        },
+        "2+": {
+          "skill": "acb"
+        }
+      },
+      "params": {
+        "blastSkill": 5.8,
+        "blastCycleSeconds": 0.63,
+        "acbSkill": 3.5,
+        "acbCycleSeconds": 0.6,
+        "elementMultipliers": {
+          "neutral": 1.4,
+          "general-weak": 1.95,
+          "holy-weak": 2.1
+        }
+      }
+    },
+    "bowmaster": {
+      "params": {
+        "hurricaneNormalPct": 1,
+        "arrowRainNormalPct": 1.6,
+        "criticalBaseRate": 0.4,
+        "seCritRateAdd": 0.15,
+        "criticalBaseAdd": 1,
+        "seSkillAdd": 1.4,
+        "hurricaneArrowsPerMinute": 500,
+        "arrowRainArrowsPerMinute": 100,
+        "phoenixBaseFactor": 2.125,
+        "phoenixSkillPct": 5.5,
+        "phoenixAttacksPerMinute": 15
+      },
+      "selectors": {
+        "1-3": {
+          "skill": "hurricane"
+        },
+        "4-6": {
+          "skill": "arrow-rain"
+        }
+      },
+      "summon": {
+        "id": "phoenix",
+        "maxTargets": 4
+      },
+      "canonicalDescription": "Hurricane + Phoenix 1–3T; Arrow Rain + Phoenix 4–6T. Bomb geometry and Inferno elemental/DoT branches are not mainline."
+    },
+    "marksman": {
+      "params": {
+        "strafeNormalPct": 1.25,
+        "criticalBaseRate": 0.4,
+        "seCritRateAdd": 0.15,
+        "criticalBaseAdd": 1,
+        "seSkillAdd": 1.4,
+        "frostpreyBaseFactor": 2.125,
+        "frostpreySkillPct": 6,
+        "frostpreyAttacksPerMinute": 14.285714285714286
+      },
+      "selectors": {
+        "1-3": {
+          "mode": "canonical",
+          "branch": "snipe-plus-7-strafe",
+          "alternates": [
+            "pure-strafe"
+          ]
+        },
+        "4-6": {
+          "mode": "canonical",
+          "branch": "pa-1.75"
+        }
+      },
+      "branches": {
+        "pure-strafe": {
+          "role": "candidate"
+        },
+        "snipe-plus-7-strafe": {
+          "role": "candidate",
+          "params": {
+            "snipeDamage": 199999,
+            "rotationActions": 8,
+            "cycleSeconds": 5.04,
+            "strafeExpectedCastCoeff": 10.28
+          }
+        },
+        "pa-1.75": {
+          "role": "canonical",
+          "params": {
+            "cycleSeconds": 1.75,
+            "successiveTargetMultiplier": 1.2,
+            "capOrder": "before-pierce"
+          },
+          "evidence": "VIA 1.000s full charge + 0.750s recovery; no input buffering"
+        }
+      },
+      "summon": {
+        "id": "frostprey",
+        "maxTargets": 4
+      },
+      "retiredTimings": [
+        {
+          "seconds": 1.2,
+          "reason": "animation duration misinterpreted as repeat cycle"
+        },
+        {
+          "seconds": 1.4,
+          "reason": "old canonical without direct repeat-cycle evidence"
+        }
+      ]
+    },
+    "night-lord": {
+      "params": {
+        "ttBaseLukFactor": 3.75,
+        "ttSkillPct": 1.5,
+        "avengerSkillPct": 2,
+        "criticalThrowRate": 0.5,
+        "seCritRate": 0.15,
+        "criticalThrowAdd": 1,
+        "seSkillAdd": 1.4,
+        "ttShadowPartnerLines": 4.5,
+        "avengerShadowPartnerMultiplier": 1.5,
+        "ttCycleSeconds": 0.6,
+        "avengerCycleSeconds": 0.63,
+        "clawMinLukFactor": 1.944,
+        "clawMaxLukFactor": 3.6
+      },
+      "selectors": {
+        "1-3": {
+          "skill": "tt-sp"
+        },
+        "4-6": {
+          "skill": "avenger"
+        }
+      },
+      "branches": {
+        "tt-sp": {
+          "role": "canonical"
+        },
+        "avenger": {
+          "role": "canonical"
+        }
+      }
+    },
+    "corsair": {
+      "params": {
+        "cannonSkillPct": 3.8,
+        "cannonLines": 4,
+        "bullseyeMultiplier": 1.2,
+        "seCritRate": 0.15,
+        "seSkillAdd": 1.4,
+        "cannonCycleSeconds": 0.6,
+        "torpedoMarkedPctPerSecond": 13.29,
+        "torpedoSecondaryPctPerSecond": 11.21
+      },
+      "selectors": {
+        "1-2": {
+          "skill": "cannon"
+        },
+        "3-6": {
+          "skill": "torpedo"
+        }
+      },
+      "branches": {
+        "cannon": {
+          "role": "canonical"
+        },
+        "torpedo": {
+          "role": "canonical"
+        }
+      }
+    },
+    "shadower": {
+      "selectors": {
+        "1-2": {
+          "skill": "assassinate-bstep"
+        },
+        "3-6": {
+          "skill": "bstep-bot"
+        }
+      },
+      "branches": {
+        "assassinate-bstep": {
+          "role": "canonical",
+          "params": {
+            "cycleSeconds": 1.9353,
+            "assassinate": {
+              "skillPct": 9.5,
+              "lines": 3
+            },
+            "boomerangStep": {
+              "skillPct": 6,
+              "lines": 2
+            }
+          }
+        },
+        "bstep-bot": {
+          "role": "canonical",
+          "params": {
+            "cycleSeconds": 1.1011,
+            "boomerangStep": {
+              "skillPct": 6,
+              "lines": 2,
+              "maxTargets": 4
+            },
+            "bandOfThieves": {
+              "skillPct": 2.5,
+              "maxTargets": 6
+            }
+          }
+        }
+      },
+      "excluded": [
+        "meso-explosion"
+      ]
+    },
+    "buccaneer": {
+      "canonical": {
+        "id": "sustained-cap-aware",
+        "stUptime": 0.75,
+        "nonStUptime": 0.25,
+        "lineByLineBarrageCap": true,
+        "dsSnatchCycleSeconds": 1.653,
+        "sourceStatus": "v9.5.0-selector-integrated-workbook-parity-pending",
+        "sourceRefs": [
+          "24_bucc_barrage_exact_cap_audit.md",
+          "13_bucc_ds_snatch_60fps_timing_audit.md"
+        ],
+        "sourceEvidence": "統整MapleRoyals進度 p.3 final + 整理 Buccaneer 公式 measured rotation comparison",
+        "exactModel": {
+          "damageCap": 199999,
+          "stUptime": 0.75,
+          "nonStUptime": 0.25,
+          "dsSnatchCycleSeconds": 1.653,
+          "skills": {
+            "barrage": {
+              "lineByLineCap": true,
+              "lineMultipliers": [
+                1,
+                1,
+                1,
+                1,
+                2,
+                4
+              ],
+              "lines": [
+                {
+                  "coefficient": 3.3,
+                  "criticalCoefficient": 4.7,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 3.3,
+                  "criticalCoefficient": 4.7,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 3.3,
+                  "criticalCoefficient": 4.7,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 3.3,
+                  "criticalCoefficient": 4.7,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 6.6,
+                  "criticalCoefficient": 9.4,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 13.2,
+                  "criticalCoefficient": 18.8,
+                  "criticalChance": 0.15
+                }
+              ]
+            },
+            "demolition": {
+              "lines": [
+                {
+                  "coefficient": 5,
+                  "criticalCoefficient": 6.4,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 5,
+                  "criticalCoefficient": 6.4,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 5,
+                  "criticalCoefficient": 6.4,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 5,
+                  "criticalCoefficient": 6.4,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 5,
+                  "criticalCoefficient": 6.4,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 5,
+                  "criticalCoefficient": 6.4,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 5,
+                  "criticalCoefficient": 6.4,
+                  "criticalChance": 0.15
+                },
+                {
+                  "coefficient": 5,
+                  "criticalCoefficient": 6.4,
+                  "criticalChance": 0.15
+                }
+              ]
+            },
+            "dragon-strike": {
+              "targetMultipliers": {
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "6": 6
+              },
+              "lines": [
+                {
+                  "coefficient": 9,
+                  "criticalCoefficient": 10.4,
+                  "criticalChance": 0.15
+                }
+              ]
+            },
+            "snatch": {
+              "targetMultipliers": {
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "6": 6
+              },
+              "lines": [
+                {
+                  "coefficient": 6,
+                  "criticalCoefficient": 7.4,
+                  "criticalChance": 0.15
+                }
+              ]
+            },
+            "shockwave": {
+              "targetMultipliers": {
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "6": 6
+              },
+              "lines": [
+                {
+                  "coefficient": 7,
+                  "criticalCoefficient": 8.4,
+                  "criticalChance": 0.15
+                }
+              ]
+            }
+          },
+          "selectors": {
+            "1": {
+              "st": {
+                "id": "barrage-demolition",
+                "cycleSeconds": 4.17,
+                "actions": [
+                  {
+                    "skill": "barrage"
+                  },
+                  {
+                    "skill": "demolition"
+                  }
+                ]
+              },
+              "nonSt": {
+                "id": "barrage-dragon-strike",
+                "cycleSeconds": 2.91,
+                "actions": [
+                  {
+                    "skill": "barrage"
+                  },
+                  {
+                    "skill": "dragon-strike"
+                  }
+                ]
+              }
+            },
+            "2": {
+              "st": {
+                "id": "barrage-dragon-strike",
+                "cycleSeconds": 2.91,
+                "actions": [
+                  {
+                    "skill": "barrage"
+                  },
+                  {
+                    "skill": "dragon-strike"
+                  }
+                ]
+              },
+              "nonSt": {
+                "id": "barrage-dragon-strike",
+                "cycleSeconds": 2.91,
+                "actions": [
+                  {
+                    "skill": "barrage"
+                  },
+                  {
+                    "skill": "dragon-strike"
+                  }
+                ]
+              }
+            },
+            "3": {
+              "st": {
+                "id": "dragon-strike-snatch",
+                "cycleSeconds": 1.653,
+                "actions": [
+                  {
+                    "skill": "dragon-strike"
+                  },
+                  {
+                    "skill": "snatch"
+                  }
+                ]
+              },
+              "nonSt": {
+                "id": "barrage-dragon-strike",
+                "cycleSeconds": 2.91,
+                "actions": [
+                  {
+                    "skill": "barrage"
+                  },
+                  {
+                    "skill": "dragon-strike"
+                  }
+                ]
+              }
+            },
+            "4": {
+              "st": {
+                "id": "dragon-strike-snatch",
+                "cycleSeconds": 1.653,
+                "actions": [
+                  {
+                    "skill": "dragon-strike"
+                  },
+                  {
+                    "skill": "snatch"
+                  }
+                ]
+              },
+              "nonSt": {
+                "id": "transform-dragon-strike-shockwave",
+                "cycleSeconds": 2.4,
+                "actions": [
+                  {
+                    "skill": "dragon-strike"
+                  },
+                  {
+                    "skill": "shockwave"
+                  }
+                ]
+              }
+            },
+            "6": {
+              "st": {
+                "id": "dragon-strike-snatch",
+                "cycleSeconds": 1.653,
+                "actions": [
+                  {
+                    "skill": "dragon-strike"
+                  },
+                  {
+                    "skill": "snatch"
+                  }
+                ]
+              },
+              "nonSt": {
+                "id": "transform-dragon-strike-shockwave",
+                "cycleSeconds": 2.4,
+                "actions": [
+                  {
+                    "skill": "dragon-strike"
+                  },
+                  {
+                    "skill": "shockwave"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "excludedFromMainline": [
+          "energy-blast",
+          "energy-orb",
+          "dragon-strike-spam",
+          "animation-cancel"
+        ]
+      }
+    }
+  },
+  "modelVersion": "v9.5.0-integration"
+}

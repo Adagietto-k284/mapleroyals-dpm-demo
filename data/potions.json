@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0.0",
+  "potions": [
+    {
+      "id": "gizer",
+      "label": "Gizer / Energizer",
+      "wa": 25
+    },
+    {
+      "id": "stopper",
+      "label": "Heartstopper",
+      "wa": 60
+    },
+    {
+      "id": "apple",
+      "label": "Onyx Apple",
+      "wa": 100
+    },
+    {
+      "id": "gelt",
+      "label": "Gelt Chocolate",
+      "wa": 120
+    },
+    {
+      "id": "nari-vl",
+      "label": "Naricain Elixir / VL Pot",
+      "wa": 140
+    }
+  ],
+  "rule": "Potion WA is an additive WA input before Echo; never a DPM multiplier."
+}

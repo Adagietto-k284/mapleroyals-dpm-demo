@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "model": {
+    "name": "Gear-driven Master",
+    "version": "v9.5.0-gear-alignment-1",
+    "sourceVersion": "v9.5.0",
+    "integrationStatus": "Bucc workbook parity pending"
+  },
+  "data": {
+    "name": "Interactive input schema",
+    "version": "phase1-v0.2"
+  },
+  "ui": {
+    "name": "Plotly progression prototype",
+    "version": "phase5-v0.1"
+  },
+  "potionSweep": {
+    "version": "v0.1",
+    "baseline": "v9.4.2 archived; not the current golden fixture"
+  },
+  "lastFormulaRevision": "2026-09-08",
+  "wdef": {
+    "specVersion": "v0.1",
+    "auditStatus": "frozen",
+    "engineStatus": "integrated-bounded",
+    "default": 0,
+    "auditedPresets": [
+      0,
+      500,
+      1000,
+      1500,
+      2000,
+      2500,
+      3200,
+      4000
+    ],
+    "auditedRange": {
+      "min": 0,
+      "max": 4000
+    },
+    "baseline": "v9.5.0 computed sweep; v9.4.2 source audit archived separately"
+  },
+  "authoritativeSources": [
+    "data/model-sync-v9.5.0.json",
+    "reference/master/mapleroyals_gear_driven_master_v9_4_2_final.xlsx",
+    "reference/master/mapleroyals_gear_driven_master_v9_4_2.csv",
+    "reference/potion/mapleroyals_attack_potion_sweep_v0_1.xlsx",
+    "reference/potion/mapleroyals_attack_potion_sweep_v0_1.csv",
+    "reference/potion/mapleroyals_attack_potion_branches_v0_1.csv",
+    "reference/audits/mapleroyals_mm_strafe_vs_snipe_potion_audit_v0_1.csv",
+    "reference/audits/mapleroyals_dk_buff_fury_audit_v9_4_1.csv",
+    "reference/audits/mapleroyals_hero_enrage_audit_v9_4_2.csv",
+    "reference/audits/mapleroyals_wdef_audit_endgame_apple_v0_1.xlsx",
+    "reference/audits/mapleroyals_wdef_endgame_apple_sweep_v0_1.csv",
+    "reference/archive/mapleroyals_formula_class_model_archive_v9_4_2.md",
+    "reference/archive/mapleroyals_gear_model_archive_v9_4_2.md"
+  ],
+  "retiredRules": [
+    "v9.3 DK Polearm Fury outputs",
+    "v9.3.1 Fury double-counted class WA",
+    "v9.4.1 final master (Hero Enrage regression)",
+    "old MM PA linear 3/4 target approximation",
+    "MM PA 1.40 canonical and PA 1.20 theoretical repeat cycles",
+    "Hero/DK v9.4.2 Echo omission",
+    "Bucc 4T/6T non-ST Barrage+DS canonical",
+    "Stonetooth excluded from v9.5 scope"
+  ]
+}

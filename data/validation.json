@@ -1,0 +1,575 @@
+{
+  "schemaVersion": "1.0.0",
+  "tolerance": {
+    "absoluteDpmM": 1e-06,
+    "relative": 1e-09
+  },
+  "goldenSuites": {
+    "masterAppleV942": [
+      {
+        "id": "master-v9.4.2-apple-night-lord-Entry",
+        "classId": "night-lord",
+        "stage": "Entry",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 16.253320356,
+          "2": 16.253320356,
+          "3": 16.253320356,
+          "4": 18.836951058,
+          "6": 28.255426588
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-night-lord-Advanced",
+        "classId": "night-lord",
+        "stage": "Advanced",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 17.544340476,
+          "2": 17.544340476,
+          "3": 17.544340476,
+          "4": 20.378225905,
+          "6": 30.567338857
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-night-lord-Late-game",
+        "classId": "night-lord",
+        "stage": "Late-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 18.932724135,
+          "2": 18.932724135,
+          "3": 18.932724135,
+          "4": 21.929521265,
+          "6": 32.894281898
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-night-lord-End-game",
+        "classId": "night-lord",
+        "stage": "End-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 20.251616112,
+          "2": 20.251616112,
+          "3": 20.251616112,
+          "4": 23.430739698,
+          "6": 35.146109546
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-corsair-Entry",
+        "classId": "corsair",
+        "stage": "Entry",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 18.88051523764224,
+          "2": 18.88051523764224,
+          "3": 21.01693264140288,
+          "4": 27.61451916926976,
+          "6": 40.80969222500352
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-corsair-Advanced",
+        "classId": "corsair",
+        "stage": "Advanced",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 20.7678361233408,
+          "2": 20.7678361233408,
+          "3": 23.117812592409603,
+          "4": 30.374902459699204,
+          "6": 44.8890821942784
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-corsair-Late-game",
+        "classId": "corsair",
+        "stage": "Late-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 23.16467520866304,
+          "2": 23.16467520866304,
+          "3": 25.78586507797248,
+          "4": 33.880503765288964,
+          "6": 50.069781139921936
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-corsair-End-game",
+        "classId": "corsair",
+        "stage": "End-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 24.79577296395264,
+          "2": 24.79577296395264,
+          "3": 27.60152906928768,
+          "4": 36.26613676647936,
+          "6": 53.59535216086272
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-shadower-Entry",
+        "classId": "shadower",
+        "stage": "Entry",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 14.417617849343356,
+          "2": 18.689504619519166,
+          "3": 27.217565562087465,
+          "4": 36.29008741611663,
+          "6": 39.41854322785081
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-shadower-Advanced",
+        "classId": "shadower",
+        "stage": "Advanced",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 15.569160923652676,
+          "2": 20.182245641771992,
+          "3": 29.39144750639279,
+          "4": 39.18859667519039,
+          "6": 42.56692397477577
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-shadower-Late-game",
+        "classId": "shadower",
+        "stage": "Late-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 16.867653238149327,
+          "2": 21.8654764198232,
+          "3": 31.842740089604728,
+          "4": 42.45698678613963,
+          "6": 46.11707185391029
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-shadower-End-game",
+        "classId": "shadower",
+        "stage": "End-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 17.98718104391346,
+          "2": 23.316716168035967,
+          "3": 33.95618363973689,
+          "4": 45.274911519649194,
+          "6": 49.177921133412056
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-bowmaster-Entry",
+        "classId": "bowmaster",
+        "stage": "Entry",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 13.987380288,
+          "2": 14.2098106,
+          "3": 14.432240913,
+          "4": 14.749601915,
+          "6": 21.679542247
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-bowmaster-Advanced",
+        "classId": "bowmaster",
+        "stage": "Advanced",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 15.245842834,
+          "2": 15.475203146,
+          "3": 15.704563459,
+          "4": 16.03748572,
+          "6": 23.597507955
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-bowmaster-Late-game",
+        "classId": "bowmaster",
+        "stage": "Late-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 17.222458015,
+          "2": 17.455149265,
+          "3": 17.687840515,
+          "4": 18.03770257,
+          "6": 26.591171355
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-bowmaster-End-game",
+        "classId": "bowmaster",
+        "stage": "End-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 18.371504733,
+          "2": 18.610527858,
+          "3": 18.849550983,
+          "4": 19.213625706,
+          "6": 28.342392309
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-dark-knight-Entry",
+        "classId": "dark-knight",
+        "stage": "Entry",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 12.838788508,
+          "2": 25.677577016,
+          "3": 38.516365524,
+          "4": 38.516365524,
+          "6": 38.516365524
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-dark-knight-Advanced",
+        "classId": "dark-knight",
+        "stage": "Advanced",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 13.8223160133,
+          "2": 27.6446320266,
+          "3": 41.4669480399,
+          "4": 41.4669480399,
+          "6": 41.4669480399
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-dark-knight-Late-game",
+        "classId": "dark-knight",
+        "stage": "Late-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 15.161788572,
+          "2": 30.323577144,
+          "3": 45.485365716,
+          "4": 45.485365716,
+          "6": 45.485365716
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-dark-knight-End-game",
+        "classId": "dark-knight",
+        "stage": "End-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 16.895487168,
+          "2": 33.790974336,
+          "3": 50.68646150399999,
+          "4": 50.68646150399999,
+          "6": 50.68646150399999
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-hero-Entry",
+        "classId": "hero",
+        "stage": "Entry",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 12.898429956069,
+          "2": 25.796859912137,
+          "3": 38.695289868206,
+          "4": 38.695289868206,
+          "6": 38.695289868206
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-hero-Advanced",
+        "classId": "hero",
+        "stage": "Advanced",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 13.913232734443,
+          "2": 27.826465468886,
+          "3": 41.739698203329,
+          "4": 41.739698203329,
+          "6": 41.739698203329
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-hero-Late-game",
+        "classId": "hero",
+        "stage": "Late-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 15.091127171141,
+          "2": 30.182254342282,
+          "3": 45.273381513424,
+          "4": 45.273381513424,
+          "6": 45.273381513424
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-hero-End-game",
+        "classId": "hero",
+        "stage": "End-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 16.714968086232,
+          "2": 33.429936172464,
+          "3": 50.144904258697,
+          "4": 50.144904258697,
+          "6": 50.144904258697
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-buccaneer-Entry",
+        "classId": "buccaneer",
+        "stage": "Entry",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 12.63,
+          "2": 13.17,
+          "3": 19.0,
+          "4": 24.62,
+          "6": 35.85
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-buccaneer-Advanced",
+        "classId": "buccaneer",
+        "stage": "Advanced",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 13.56,
+          "2": 14.12,
+          "3": 20.47,
+          "4": 26.53,
+          "6": 38.65
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-buccaneer-Late-game",
+        "classId": "buccaneer",
+        "stage": "Late-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 14.87,
+          "2": 15.46,
+          "3": 22.61,
+          "4": 29.31,
+          "6": 42.71
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-buccaneer-End-game",
+        "classId": "buccaneer",
+        "stage": "End-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 15.78,
+          "2": 16.37,
+          "3": 24.13,
+          "4": 31.3,
+          "6": 45.62
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-marksman-Entry",
+        "classId": "marksman",
+        "stage": "Entry",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 14.182860374,
+          "2": 14.413956803,
+          "3": 21.384623008256,
+          "4": 31.438418523,
+          "6": 57.370344109
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-marksman-Advanced",
+        "classId": "marksman",
+        "stage": "Advanced",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 15.225486879,
+          "2": 15.463783308,
+          "3": 23.257807333035,
+          "4": 34.197796725,
+          "6": 62.450266147
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-marksman-Late-game",
+        "classId": "marksman",
+        "stage": "Late-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 16.849410104,
+          "2": 17.091167247,
+          "3": 26.165954764013,
+          "4": 38.485047292,
+          "6": 70.369212711
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-marksman-End-game",
+        "classId": "marksman",
+        "stage": "End-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 17.795998894,
+          "2": 18.044334608,
+          "3": 27.848839430781,
+          "4": 40.964049374,
+          "6": 74.932597339
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-paladin-Entry",
+        "classId": "paladin",
+        "stage": "Entry",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 14.307981134410964,
+          "2": 18.647986418181123,
+          "3": 27.971979627271686,
+          "4": 37.295972836362246,
+          "6": 55.94395925454337
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-paladin-Advanced",
+        "classId": "paladin",
+        "stage": "Advanced",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 15.391276887257916,
+          "2": 20.18796186751344,
+          "3": 30.28194280127016,
+          "4": 40.37592373502688,
+          "6": 60.56388560254032
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-paladin-Late-game",
+        "classId": "paladin",
+        "stage": "Late-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 16.427661782506654,
+          "2": 21.96371774902032,
+          "3": 32.94557662353048,
+          "4": 43.92743549804064,
+          "6": 65.89115324706096
+        }
+      },
+      {
+        "id": "master-v9.4.2-apple-paladin-End-game",
+        "classId": "paladin",
+        "stage": "End-game",
+        "potionId": "apple",
+        "wdef": 0,
+        "expectedDpmM": {
+          "1": 17.449438945022887,
+          "2": 24.368765840571413,
+          "3": 36.55314876085712,
+          "4": 48.737531681142826,
+          "6": 73.10629752171424
+        }
+      }
+    ],
+    "mmAutoSelector": [
+      {
+        "stage": "End-game",
+        "potionId": "gelt",
+        "potionWa": 120,
+        "pureStrafe1TDpmM": 18.516148042270476,
+        "snipe7Strafe1TDpmM": 18.613611977462853,
+        "expectedAuto": "snipe-plus-7-strafe",
+        "crossoverPotionWa": 136.688762934943
+      },
+      {
+        "stage": "End-game",
+        "potionId": "nari-vl",
+        "potionWa": 140,
+        "pureStrafe1TDpmM": 19.450562995108573,
+        "snipe7Strafe1TDpmM": 19.431225061196194,
+        "expectedAuto": "pure-strafe",
+        "crossoverPotionWa": 136.688762934943
+      }
+    ],
+    "dkFury": [
+      {
+        "stage": "End-game",
+        "potionId": "apple",
+        "weapon": "144/21 Purple Surfboard",
+        "cleanWa": 217,
+        "expectedDpmM": {
+          "3": 32.125692020647676,
+          "4": 42.83425602753024,
+          "5-doc-only": 53.5428200344128,
+          "6": 64.25138404129535
+        }
+      }
+    ],
+    "heroEnrage": [
+      {
+        "stage": "Entry",
+        "cleanWa": 172,
+        "averageEnrageWa": 17.333333333333332,
+        "expected1TDpmM": 12.898429956069
+      },
+      {
+        "stage": "Advanced",
+        "cleanWa": 191,
+        "averageEnrageWa": 17.333333333333332,
+        "expected1TDpmM": 13.913232734443
+      },
+      {
+        "stage": "Late-game",
+        "cleanWa": 209,
+        "averageEnrageWa": 17.333333333333332,
+        "expected1TDpmM": 15.091127171141
+      },
+      {
+        "stage": "End-game",
+        "cleanWa": 223,
+        "averageEnrageWa": 17.333333333333332,
+        "expected1TDpmM": 16.714968086232
+      }
+    ]
+  }
+}

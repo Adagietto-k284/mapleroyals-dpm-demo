@@ -1,0 +1,785 @@
+{
+  "schemaVersion": "1.1.0",
+  "authority": "v9.5.0 engines + user-approved gear alignment 2026-09-11; Corsair slot reconstruction pending",
+  "gearModelArchive": "reference/archive/mapleroyals_gear_model_archive_v9_4_2.md",
+  "rules": {
+    "level": 200,
+    "mwSkillLevel": 20,
+    "stageOrder": [
+      "Entry",
+      "Advanced",
+      "Late-game",
+      "End-game"
+    ],
+    "targetCounts": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ],
+    "cleanRangeIsInput": false,
+    "note": "Engine must calculate range from actual stats + clean WA. referenceCleanRange is validation-only."
+  },
+  "classes": {
+    "night-lord": {
+      "stages": {
+        "Entry": {
+          "cleanWa": 140,
+          "stats": {
+            "mw20": {
+              "str": null,
+              "dex": 141,
+              "luk": 1201
+            },
+            "aux": {
+              "strSubtotal": 63
+            }
+          },
+          "referenceCleanRange": {
+            "min": 3554.2416000000003,
+            "max": 6338.64
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 3554.2416,
+            "max": 6338.64
+          }
+        },
+        "Advanced": {
+          "cleanWa": 156,
+          "stats": {
+            "mw20": {
+              "str": null,
+              "dex": 149,
+              "luk": 1218
+            },
+            "aux": {
+              "strSubtotal": 66
+            }
+          },
+          "referenceCleanRange": {
+            "min": 4029.15552,
+            "max": 7175.688
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 4032.18816,
+            "max": 7181.304
+          }
+        },
+        "Late-game": {
+          "cleanWa": 173,
+          "stats": {
+            "mw20": {
+              "str": null,
+              "dex": 145,
+              "luk": 1235
+            },
+            "aux": {
+              "strSubtotal": 61
+            }
+          },
+          "referenceCleanRange": {
+            "min": 4509.8332,
+            "max": 8047.96
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 4520.01944,
+            "max": 8063.876
+          }
+        },
+        "End-game": {
+          "cleanWa": 188,
+          "stats": {
+            "mw20": {
+              "str": null,
+              "dex": 144,
+              "luk": 1275
+            },
+            "aux": {
+              "strSubtotal": 70
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5062.088,
+            "max": 9031.52
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 4943.44704,
+            "max": 8825.376
+          }
+        }
+      }
+    },
+    "corsair": {
+      "stages": {
+        "Entry": {
+          "cleanWa": 160,
+          "stats": {
+            "mw20": {
+              "str": 119,
+              "dex": 1208,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 3947.7632,
+            "max": 7148.48
+          },
+          "rangeAnchorRole": "checksum-only",
+          "pendingStatBreakdown": false
+        },
+        "Advanced": {
+          "cleanWa": 178,
+          "stats": {
+            "mw20": {
+              "str": 118,
+              "dex": 1248,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 4528.51936,
+            "max": 8207.224
+          },
+          "rangeAnchorRole": "checksum-only",
+          "pendingStatBreakdown": false
+        },
+        "Late-game": {
+          "cleanWa": 206,
+          "stats": {
+            "mw20": {
+              "str": 113,
+              "dex": 1272,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5326.68208,
+            "max": 9665.932
+          },
+          "rangeAnchorRole": "checksum-only",
+          "pendingStatBreakdown": false
+        },
+        "End-game": {
+          "cleanWa": 219,
+          "stats": {
+            "mw20": {
+              "str": 122,
+              "dex": 1306,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5827.29216,
+            "max": 10563.684
+          },
+          "rangeAnchorRole": "checksum-only",
+          "pendingStatBreakdown": false
+        }
+      }
+    },
+    "shadower": {
+      "stages": {
+        "Entry": {
+          "cleanWa": 193,
+          "stats": {
+            "mw20": {
+              "str": 84,
+              "dex": 154,
+              "luk": 1220
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5036.6824,
+            "max": 8935.9
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 5037,
+            "max": 8936
+          }
+        },
+        "Advanced": {
+          "cleanWa": 211,
+          "stats": {
+            "mw20": {
+              "str": 87,
+              "dex": 156,
+              "luk": 1243
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5611.31712,
+            "max": 9954.558
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 5615,
+            "max": 9962
+          }
+        },
+        "Late-game": {
+          "cleanWa": 229,
+          "stats": {
+            "mw20": {
+              "str": 91,
+              "dex": 155,
+              "luk": 1272
+            }
+          },
+          "referenceCleanRange": {
+            "min": 6225.978719999999,
+            "max": 11049.707999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 6263,
+            "max": 11086
+          }
+        },
+        "End-game": {
+          "cleanWa": 252,
+          "stats": {
+            "mw20": {
+              "str": 95,
+              "dex": 156,
+              "luk": 1285
+            }
+          },
+          "referenceCleanRange": {
+            "min": 6927.5808,
+            "max": 12290.039999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 6840,
+            "max": 12066
+          }
+        }
+      }
+    },
+    "bowmaster": {
+      "stages": {
+        "Entry": {
+          "cleanWa": 184,
+          "stats": {
+            "mw20": {
+              "str": 110,
+              "dex": 1219,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 6379.51184,
+            "max": 7828.463999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 6369.37712,
+            "max": 7815.952
+          }
+        },
+        "Advanced": {
+          "cleanWa": 203,
+          "stats": {
+            "mw20": {
+              "str": 108,
+              "dex": 1254,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 7229.87748,
+            "max": 8874.348
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 7177.26378,
+            "max": 8809.428
+          }
+        },
+        "Late-game": {
+          "cleanWa": 237,
+          "stats": {
+            "mw20": {
+              "str": 106,
+              "dex": 1271,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 8547.011579999999,
+            "max": 10492.937999999998
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 8586.75648,
+            "max": 10540.338
+          }
+        },
+        "End-game": {
+          "cleanWa": 253,
+          "stats": {
+            "mw20": {
+              "str": 123,
+              "dex": 1305,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 9403.934099999999,
+            "max": 11536.8
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 9333.99724,
+            "max": 11451.624
+          }
+        }
+      }
+    },
+    "dark-knight": {
+      "stages": {
+        "Entry": {
+          "cleanWa": 161,
+          "stats": {
+            "mw20": {
+              "str": 1204,
+              "dex": 99,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 7137.774000000001,
+            "max": 9851.59
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 7137.774,
+            "max": 9851.59
+          }
+        },
+        "Advanced": {
+          "cleanWa": 178,
+          "stats": {
+            "mw20": {
+              "str": 1218,
+              "dex": 110,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 8000.744000000001,
+            "max": 11036
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 8000.744,
+            "max": 11036
+          }
+        },
+        "Late-game": {
+          "cleanWa": 194,
+          "stats": {
+            "mw20": {
+              "str": 1271,
+              "dex": 83,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 9037.684000000001,
+            "max": 12489.72
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 9055.532,
+            "max": 12513
+          }
+        },
+        "End-game": {
+          "cleanWa": 212,
+          "stats": {
+            "mw20": {
+              "str": 1353,
+              "dex": 97,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 10531.736,
+            "max": 14547.44
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "source": null,
+          "historicalReferenceCleanRange": {
+            "min": 10531.736,
+            "max": 14547.44
+          },
+          "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+        }
+      }
+    },
+    "hero": {
+      "stages": {
+        "Entry": {
+          "cleanWa": 172,
+          "stats": {
+            "mw20": {
+              "str": 1204,
+              "dex": 99,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5314.34592,
+            "max": 9696.328
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 5314.34592,
+            "max": 9696.328
+          }
+        },
+        "Advanced": {
+          "cleanWa": 191,
+          "stats": {
+            "mw20": {
+              "str": 1219,
+              "dex": 110,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5993.57236,
+            "max": 10920.233999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 5993.57236,
+            "max": 10920.234
+          }
+        },
+        "Late-game": {
+          "cleanWa": 209,
+          "stats": {
+            "mw20": {
+              "str": 1249,
+              "dex": 114,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 6722.518440000001,
+            "max": 12246.145999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 6737.08156,
+            "max": 12269.554
+          }
+        },
+        "End-game": {
+          "cleanWa": 223,
+          "stats": {
+            "mw20": {
+              "str": 1353,
+              "dex": 97,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 7711.009959999999,
+            "max": 14095.383999999998
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "source": null,
+          "historicalReferenceCleanRange": {
+            "min": 7711.0102,
+            "max": 14095.384
+          },
+          "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+        }
+      }
+    },
+    "buccaneer": {
+      "stages": {
+        "Entry": {
+          "cleanWa": 145,
+          "stats": {
+            "mw20": {
+              "str": 1189,
+              "dex": 101,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 4615.1876,
+            "max": 8421.89
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 4646,
+            "max": 8476
+          }
+        },
+        "Advanced": {
+          "cleanWa": 162,
+          "stats": {
+            "mw20": {
+              "str": 1222,
+              "dex": 100,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5293.226879999999,
+            "max": 9664.271999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 5226,
+            "max": 9515
+          }
+        },
+        "Late-game": {
+          "cleanWa": 182,
+          "stats": {
+            "mw20": {
+              "str": 1247,
+              "dex": 109,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 6081.02768,
+            "max": 11092.171999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 6070,
+            "max": 11040
+          }
+        },
+        "End-game": {
+          "cleanWa": 196,
+          "stats": {
+            "mw20": {
+              "str": 1298,
+              "dex": 119,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 6827.495360000001,
+            "max": 12444.823999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 6635,
+            "max": 12062
+          }
+        }
+      }
+    },
+    "marksman": {
+      "stages": {
+        "Entry": {
+          "cleanWa": 192,
+          "stats": {
+            "mw20": {
+              "str": 110,
+              "dex": 1217,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 7781.913600000001,
+            "max": 8623.104
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 7781.9136,
+            "max": 8623.104
+          }
+        },
+        "Advanced": {
+          "cleanWa": 211,
+          "stats": {
+            "mw20": {
+              "str": 106,
+              "dex": 1254,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 8796.505600000002,
+            "max": 9749.044000000002
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 8739.7112,
+            "max": 9685.478
+          }
+        },
+        "Late-game": {
+          "cleanWa": 245,
+          "stats": {
+            "mw20": {
+              "str": 104,
+              "dex": 1271,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 10343.998,
+            "max": 11465.02
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 10395.938,
+            "max": 11521.37
+          }
+        },
+        "End-game": {
+          "cleanWa": 261,
+          "stats": {
+            "mw20": {
+              "str": 121,
+              "dex": 1305,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 11351.412000000002,
+            "max": 12577.59
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 11275.4096,
+            "max": 12493.124
+          }
+        }
+      }
+    },
+    "paladin": {
+      "stages": {
+        "Entry": {
+          "cleanWa": 172,
+          "stats": {
+            "mw20": {
+              "str": 1204,
+              "dex": 99,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5314.34592,
+            "max": 9696.328
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 5314.34592,
+            "max": 9696.328
+          }
+        },
+        "Advanced": {
+          "cleanWa": 191,
+          "stats": {
+            "mw20": {
+              "str": 1219,
+              "dex": 110,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 5993.57236,
+            "max": 10920.233999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 5993.57236,
+            "max": 10920.234
+          }
+        },
+        "Late-game": {
+          "cleanWa": 209,
+          "stats": {
+            "mw20": {
+              "str": 1249,
+              "dex": 114,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 6722.518440000001,
+            "max": 12246.145999999999
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "historicalReferenceCleanRange": {
+            "min": 6737.08156,
+            "max": 12269.554
+          }
+        },
+        "End-game": {
+          "cleanWa": 223,
+          "stats": {
+            "mw20": {
+              "str": 1353,
+              "dex": 97,
+              "luk": null
+            }
+          },
+          "referenceCleanRange": {
+            "min": 7711.009959999999,
+            "max": 14095.383999999998
+          },
+          "rangeAnchorRole": "derived-checksum; historical reference retained separately",
+          "pendingStatBreakdown": false,
+          "source": null,
+          "historicalReferenceCleanRange": {
+            "min": 7711.0102,
+            "max": 14095.384
+          },
+          "publicProvenanceNote": "Project-authored recovered record; private conversation links and message identifiers omitted. External attribution remains incomplete."
+        }
+      }
+    }
+  },
+  "revision": "gear-alignment-2026-09-11"
+}
